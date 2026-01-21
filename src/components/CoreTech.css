@@ -281,4 +281,12 @@
     .traction-grid {
         grid-template-columns: 1fr;
     }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-box.full {
+        grid-column: span 1;
+    }
 }
