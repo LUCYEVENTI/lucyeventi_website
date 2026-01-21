@@ -49,89 +49,90 @@ const VideoCard = ({ src, className, style }) => (
     </div>
 );
 
-const [isMobile, setIsMobile] = React.useState(false);
+const PhoneMockup = ({ state = 'hero' }) => {
+    const [isMobile, setIsMobile] = React.useState(false);
 
-React.useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth <= 960);
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-}, []);
+    React.useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth <= 960);
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
 
-// On mobile, we disable the 3D flip to avoid browser quirks and "upside down" issues.
-// We just switch the z-index or opacity.
+    // On mobile, we disable the 3D flip to avoid browser quirks and "upside down" issues.
+    // We just switch the z-index or opacity.
 
-return (
-    <div className="mockup-frame" style={{ width: isMobile ? '280px' : '320px', height: isMobile ? '580px' : '650px', margin: '0 auto' }}>
-        <div className="mockup-screen" style={{ overflow: 'hidden', perspective: '1000px' }}>
-            <div className="mockup-header">
-                <div className="mockup-notch"></div>
+    return (
+        <div className="mockup-frame" style={{ width: isMobile ? '280px' : '320px', height: isMobile ? '580px' : '650px', margin: '0 auto' }}>
+            <div className="mockup-screen" style={{ overflow: 'hidden', perspective: '1000px' }}>
+                <div className="mockup-header">
+                    <div className="mockup-notch"></div>
+                </div>
+
+                {/* Content Container */}
+                <motion.div
+                    className="mockup-content-wrapper"
+                    style={{
+                        width: '100%',
+                        height: '100%',
+                        position: 'relative',
+                        transformStyle: 'preserve-3d'
+                    }}
+                    animate={{
+                        rotateX: isMobile ? 0 : (state === 'app' ? -180 : 0)
+                    }}
+                    transition={{ duration: 0.8, ease: "easeInOut" }}
+                >
+                    {/* Front Face: Hero State */}
+                    <div className="screen-face front" style={{
+                        position: 'absolute', width: '100%', height: '100%', backfaceVisibility: 'hidden',
+                        display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+                        background: 'var(--bg-dark)',
+                        opacity: (isMobile && state === 'app') ? 0 : 1, // Crossfade on mobile
+                        transition: 'opacity 0.5s'
+                    }}>
+                        {/* Abstract Hero Visual */}
+                        <div style={{ position: 'relative', zIndex: 2 }}>
+                            <div className="gradient-sphere" style={{ width: '150px', height: '150px', background: 'var(--accent-primary)', opacity: 0.6, filter: 'blur(40px)' }}></div>
+                            <h2 style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', fontSize: '2rem', fontWeight: 'bold' }}>LUCYEVENTI</h2>
+                        </div>
+                    </div>
+
+                    {/* Back Face: App UI (The content from ProductShowcase) */}
+                    <div className="screen-face back" style={{
+                        position: 'absolute', width: '100%', height: '100%', backfaceVisibility: 'hidden',
+                        transform: isMobile ? 'none' : 'rotateX(180deg)', // No rotation needed on mobile if we don't flip
+                        background: 'var(--bg-dark)', display: 'flex', flexDirection: 'column',
+                        opacity: (isMobile && state !== 'app') ? 0 : 1,
+                        zIndex: (isMobile && state === 'app') ? 10 : 0
+                    }}>
+                        <div className="mockup-content" style={{ padding: '1rem', paddingTop: '3rem' }}>
+                            <div className="ui-header">
+                                <div className="ui-avatar"></div>
+                                <div className="ui-bar"></div>
+                            </div>
+
+                            {/* Main Hero Card */}
+                            <VideoCard src="assets/club-video.mp4" className="ui-card-hero" />
+
+                            <div className="ui-row">
+                                <VideoCard src="assets/club-video1.mp4" className="ui-card-sm" />
+                                <VideoCard src="assets/club-video2.mp4" className="ui-card-sm" />
+                            </div>
+
+                            <div className="ui-list">
+                                <VideoCard src="assets/club-video3.mp4" className="ui-list-item" />
+                                <VideoCard src="assets/club-video4.mp4" className="ui-list-item" />
+                                <VideoCard src="assets/club-video5.mp4" className="ui-list-item" />
+                            </div>
+                        </div>
+                        <div className="mockup-nav"></div>
+                    </div>
+                </motion.div>
             </div>
-
-            {/* Content Container */}
-            <motion.div
-                className="mockup-content-wrapper"
-                style={{
-                    width: '100%',
-                    height: '100%',
-                    position: 'relative',
-                    transformStyle: 'preserve-3d'
-                }}
-                animate={{
-                    rotateX: isMobile ? 0 : (state === 'app' ? -180 : 0)
-                }}
-                transition={{ duration: 0.8, ease: "easeInOut" }}
-            >
-                {/* Front Face: Hero State */}
-                <div className="screen-face front" style={{
-                    position: 'absolute', width: '100%', height: '100%', backfaceVisibility: 'hidden',
-                    display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-                    background: 'var(--bg-dark)',
-                    opacity: (isMobile && state === 'app') ? 0 : 1, // Crossfade on mobile
-                    transition: 'opacity 0.5s'
-                }}>
-                    {/* Abstract Hero Visual */}
-                    <div style={{ position: 'relative', zIndex: 2 }}>
-                        <div className="gradient-sphere" style={{ width: '150px', height: '150px', background: 'var(--accent-primary)', opacity: 0.6, filter: 'blur(40px)' }}></div>
-                        <h2 style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', fontSize: '2rem', fontWeight: 'bold' }}>LUCYEVENTI</h2>
-                    </div>
-                </div>
-
-                {/* Back Face: App UI (The content from ProductShowcase) */}
-                <div className="screen-face back" style={{
-                    position: 'absolute', width: '100%', height: '100%', backfaceVisibility: 'hidden',
-                    transform: isMobile ? 'none' : 'rotateX(180deg)', // No rotation needed on mobile if we don't flip
-                    background: 'var(--bg-dark)', display: 'flex', flexDirection: 'column',
-                    opacity: (isMobile && state !== 'app') ? 0 : 1,
-                    zIndex: (isMobile && state === 'app') ? 10 : 0
-                }}>
-                    <div className="mockup-content" style={{ padding: '1rem', paddingTop: '3rem' }}>
-                        <div className="ui-header">
-                            <div className="ui-avatar"></div>
-                            <div className="ui-bar"></div>
-                        </div>
-
-                        {/* Main Hero Card */}
-                        <VideoCard src="assets/club-video.mp4" className="ui-card-hero" />
-
-                        <div className="ui-row">
-                            <VideoCard src="assets/club-video1.mp4" className="ui-card-sm" />
-                            <VideoCard src="assets/club-video2.mp4" className="ui-card-sm" />
-                        </div>
-
-                        <div className="ui-list">
-                            <VideoCard src="assets/club-video3.mp4" className="ui-list-item" />
-                            <VideoCard src="assets/club-video4.mp4" className="ui-list-item" />
-                            <VideoCard src="assets/club-video5.mp4" className="ui-list-item" />
-                        </div>
-                    </div>
-                    <div className="mockup-nav"></div>
-                </div>
-            </motion.div>
+            <div className="mockup-glow"></div>
         </div>
-        <div className="mockup-glow"></div>
-    </div>
-);
+    );
 };
 
 export default PhoneMockup;
