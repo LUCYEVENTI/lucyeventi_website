@@ -116,19 +116,19 @@ const CoreTech = () => {
                     viewport={{ once: true, margin: "-100px" }}
                 >
                     <Card variants={itemVariants} className="tech-card">
-                        <ParticleImage src="/assets/icon-ai-matching.png" alt="AI Matching" delay={0.2} />
+                        <ParticleImage src="assets/icon-ai-matching.png" alt="AI Matching" delay={0.2} />
                         <h3>AI-Powered Matching</h3>
                         <p>Motore di raccomandazione neurale che analizza pattern comportamentali per suggerimenti iper-personalizzati.</p>
                     </Card>
 
                     <Card variants={itemVariants} className="tech-card">
-                        <ParticleImage src="/assets/icon-analytics.png" alt="Analytics" delay={0.4} />
+                        <ParticleImage src="assets/icon-analytics.png" alt="Analytics" delay={0.4} />
                         <h3>Predictive Analytics</h3>
                         <p>Modelli predittivi per gli organizzatori: stima affluenza, ottimizzazione revenue e trend forecasting.</p>
                     </Card>
 
                     <Card variants={itemVariants} className="tech-card">
-                        <ParticleImage src="/assets/icon-cloud.png" alt="Cloud" delay={0.6} />
+                        <ParticleImage src="assets/icon-cloud.png" alt="Cloud" delay={0.6} />
                         <h3>Scalable Cloud Arch</h3>
                         <p>Infrastruttura serverless progettata per gestire picchi di traffico elevati con latenza zero.</p>
                     </Card>
@@ -240,7 +240,7 @@ export const Traction = () => {
                     >
                         <motion.div variants={statCardVariants} className="stat-box">
                             <div className="stat-icon-wrapper">
-                                <img src="/assets/icon-stats-users.png" alt="Utenti" className="stat-icon-img" />
+                                <img src="assets/icon-stats-users.png" alt="Utenti" className="stat-icon-img" />
                             </div>
                             <CountUp end={15} suffix="k+" />
                             <span className="stat-label">Utenti Attivi</span>
@@ -248,7 +248,7 @@ export const Traction = () => {
 
                         <motion.div variants={statCardVariants} className="stat-box">
                             <div className="stat-icon-wrapper">
-                                <img src="/assets/icon-stats-partners.png" alt="Partner" className="stat-icon-img" />
+                                <img src="assets/icon-stats-partners.png" alt="Partner" className="stat-icon-img" />
                             </div>
                             <CountUp end={120} suffix="+" />
                             <span className="stat-label">Locali Partner</span>
@@ -256,7 +256,7 @@ export const Traction = () => {
 
                         <motion.div variants={statCardVariants} className="stat-box full">
                             <div className="stat-icon-wrapper">
-                                <img src="/assets/icon-stats-growth.png" alt="Growth" className="stat-icon-img" />
+                                <img src="assets/icon-stats-growth.png" alt="Growth" className="stat-icon-img" />
                             </div>
                             <CountUp end={40} prefix="+" suffix="%" />
                             <span className="stat-label">Crescita MoM</span>

@@ -84,7 +84,7 @@ const HeroProductWrapper = () => {
                             <ul className="feature-list">
                                 <motion.li className="feature-item" whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -20 }} transition={{ delay: 0.1 }}>
                                     <div className="feature-icon-wrapper">
-                                        <img src="/assets/icon-smart-match.png" alt="Smart Match" className="feature-icon-img" />
+                                        <img src="assets/icon-smart-match.png" alt="Smart Match" className="feature-icon-img" />
                                     </div>
                                     <div>
                                         <h3>Smart Matching</h3>
@@ -93,7 +93,7 @@ const HeroProductWrapper = () => {
                                 </motion.li>
                                 <motion.li className="feature-item" whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -20 }} transition={{ delay: 0.2 }}>
                                     <div className="feature-icon-wrapper">
-                                        <img src="/assets/icon-security.png" alt="Security" className="feature-icon-img" />
+                                        <img src="assets/icon-security.png" alt="Security" className="feature-icon-img" />
                                     </div>
                                     <div>
                                         <h3>Community Sicura</h3>
@@ -102,7 +102,7 @@ const HeroProductWrapper = () => {
                                 </motion.li>
                                 <motion.li className="feature-item" whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -20 }} transition={{ delay: 0.3 }}>
                                     <div className="feature-icon-wrapper">
-                                        <img src="/assets/icon-business.png" alt="Business" className="feature-icon-img" />
+                                        <img src="assets/icon-business.png" alt="Business" className="feature-icon-img" />
                                     </div>
                                     <div>
                                         <h3>Business Tools</h3>

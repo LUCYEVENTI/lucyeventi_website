@@ -31,7 +31,7 @@ const ProductShowcase = () => {
                                 transition={{ delay: 0.1, duration: 0.5 }}
                             >
                                 <div className="feature-icon-wrapper">
-                                    <img src="/assets/icon-smart-match.png" alt="Smart Match" className="feature-icon-img" />
+                                    <img src="assets/icon-smart-match.png" alt="Smart Match" className="feature-icon-img" />
                                 </div>
                                 <div>
                                     <h3>Smart Matching</h3>
@@ -46,7 +46,7 @@ const ProductShowcase = () => {
                                 transition={{ delay: 0.3, duration: 0.5 }}
                             >
                                 <div className="feature-icon-wrapper">
-                                    <img src="/assets/icon-security.png" alt="Security" className="feature-icon-img" />
+                                    <img src="assets/icon-security.png" alt="Security" className="feature-icon-img" />
                                 </div>
                                 <div>
                                     <h3>Community Sicura</h3>
@@ -61,7 +61,7 @@ const ProductShowcase = () => {
                                 transition={{ delay: 0.5, duration: 0.5 }}
                             >
                                 <div className="feature-icon-wrapper">
-                                    <img src="/assets/icon-business.png" alt="Business" className="feature-icon-img" />
+                                    <img src="assets/icon-business.png" alt="Business" className="feature-icon-img" />
                                 </div>
                                 <div>
                                     <h3>Business Tools</h3>

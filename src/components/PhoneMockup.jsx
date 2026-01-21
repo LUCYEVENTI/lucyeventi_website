@@ -106,17 +106,17 @@ const PhoneMockup = ({ state = 'hero' }) => {
                             </div>
 
                             {/* Main Hero Card */}
-                            <VideoCard src="/assets/club-video.mp4" className="ui-card-hero" />
+                            <VideoCard src="assets/club-video.mp4" className="ui-card-hero" />
 
                             <div className="ui-row">
-                                <VideoCard src="/assets/club-video1.mp4" className="ui-card-sm" />
-                                <VideoCard src="/assets/club-video2.mp4" className="ui-card-sm" />
+                                <VideoCard src="assets/club-video1.mp4" className="ui-card-sm" />
+                                <VideoCard src="assets/club-video2.mp4" className="ui-card-sm" />
                             </div>
 
                             <div className="ui-list">
-                                <VideoCard src="/assets/club-video3.mp4" className="ui-list-item" />
-                                <VideoCard src="/assets/club-video4.mp4" className="ui-list-item" />
-                                <VideoCard src="/assets/club-video5.mp4" className="ui-list-item" />
+                                <VideoCard src="assets/club-video3.mp4" className="ui-list-item" />
+                                <VideoCard src="assets/club-video4.mp4" className="ui-list-item" />
+                                <VideoCard src="assets/club-video5.mp4" className="ui-list-item" />
                             </div>
                         </div>
                         <div className="mockup-nav"></div>
