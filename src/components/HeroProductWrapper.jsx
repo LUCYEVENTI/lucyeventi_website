@@ -48,7 +48,7 @@ const HeroProductWrapper = () => {
                         >
                             <h1 className="hero-title" style={{ textAlign: 'left' }}>
                                 Artificial Intelligence for <br />
-                                <div className="video-text-mask-container" style={{ fontSize: '2.5em', lineHeight: '1.0', marginTop: '10px', display: 'block' }}>
+                                <div className="video-text-mask-container" style={{ fontSize: '1.5em', lineHeight: '1.0', marginTop: '10px', display: 'block' }}>
                                     <video autoPlay loop muted playsInline className="text-video-bg">
                                         <source src="assets/club-video3.mp4" type="video/mp4" />
                                     </video>
@@ -156,9 +156,10 @@ const HeroProductWrapper = () => {
                 .video-text-mask-container {
                     position: relative;
                     display: inline-block;
-                    line-height: 0.85; /* Tight fit */
+                    line-height: 0.85; 
                     font-weight: 900;
-                    /* REMOVED isolation: isolate -> This allows Screen blend to transparentize the black against the site bg */
+                    /* Reduced font size by 40% (was 2.5em) */
+                    font-size: 1.5em; 
                     
                     /* Clips the video to the exact size of the text block */
                     overflow: hidden;

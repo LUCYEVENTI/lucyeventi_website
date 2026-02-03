@@ -131,6 +131,37 @@
     }
 }
 
+/* 3D Rocket Animation - LAUNCH MODE */
+.rocket-3d-anim {
+    /* Base float animation + Shake/Thrust */
+    animation: rocketLaunch 0.8s ease-in-out infinite alternate, rocketThrust 4s ease-in-out infinite;
+    transform-origin: center center;
+}
+
+@keyframes rocketLaunch {
+    0% {
+        transform: translateY(0px) rotate(0deg) scale(1.1);
+    }
+
+    100% {
+        transform: translateY(-5px) rotate(1deg) scale(1.12);
+        /* High frequency jitter */
+    }
+}
+
+@keyframes rocketThrust {
+
+    0%,
+    100% {
+        filter: drop-shadow(0 20px 50px rgba(124, 58, 237, 0.5));
+    }
+
+    50% {
+        filter: drop-shadow(0 30px 70px rgba(124, 58, 237, 0.8));
+        /* Pulsing engine glow */
+    }
+}
+
 @media (max-width: 960px) {
     .product-focus-wrapper {
         flex-direction: column;
