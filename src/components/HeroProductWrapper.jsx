@@ -223,8 +223,6 @@ const HeroProductWrapper = () => {
         </section>
     );
 };
-        </section >
-    );
-};
+
 
 export default HeroProductWrapper;
