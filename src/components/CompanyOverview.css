@@ -63,7 +63,8 @@
 
 /* Ensure canvas/img from ParticleImage is centered */
 .innovation-card canvas,
-.innovation-card img {
+.innovation-card img,
+.innovation-card .icon-wrapper {
     margin-left: auto;
     margin-right: auto;
     display: block;

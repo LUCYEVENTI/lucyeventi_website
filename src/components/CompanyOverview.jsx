@@ -65,7 +65,7 @@ const CompanyOverview = () => {
                         className="innovation-card"
                         variants={itemVariants}
                     >
-                        <ParticleImage src="assets/icon-ai-core.png" alt="AI Core" delay={0.2} size={200} />
+                        <ParticleImage src="assets/icon-ai-core.png" alt="AI Core" delay={0.2} size={120} />
                         <h3>AI Core Development</h3>
                         <p>Sviluppiamo modelli predittivi proprietari e agenti autonomi capaci di comprendere comportamenti complessi e ottimizzare esperienze in tempo reale.</p>
                     </motion.div>
@@ -74,7 +74,7 @@ const CompanyOverview = () => {
                         className="innovation-card"
                         variants={itemVariants}
                     >
-                        <ParticleImage src="assets/icon-global-network.png" alt="Ecosistemi Scalabili" delay={0.4} size={200} />
+                        <ParticleImage src="assets/icon-global-network.png" alt="Ecosistemi Scalabili" delay={0.4} size={120} />
                         <h3>Ecosistemi Scalabili</h3>
                         <p>Costruiamo architetture cloud-native progettate per connettere migliaia di utenti e venue simultaneamente, garantendo affidabilità e velocità.</p>
                     </motion.div>
@@ -83,7 +83,7 @@ const CompanyOverview = () => {
                         className="innovation-card"
                         variants={itemVariants}
                     >
-                        <ParticleImage src="assets/icon-innovation.png" alt="R&D Continuo" delay={0.6} size={200} />
+                        <ParticleImage src="assets/icon-innovation.png" alt="R&D Continuo" delay={0.6} size={120} />
                         <h3>R&D Continuo</h3>
                         <p>Investiamo costantemente in ricerca e sviluppo per integrare le ultime frontiere del Machine Learning nei nostri prodotti e servizi B2B.</p>
                     </motion.div>
