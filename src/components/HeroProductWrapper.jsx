@@ -219,47 +219,11 @@ const HeroProductWrapper = () => {
                 </div>
             </div>
 
-            <style jsx>{`
-                .sticky-viewport {
-                    position: sticky;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100vh;
-                    overflow: hidden;
-                }
-                
-                .perspective-container {
-                    perspective: 1000px;
-                }
-
-                /* Reuse existing Video styles */
-                .video-text-mask-container {
-                     position: relative;
-                    display: inline-block;
-                    line-height: 0.85; 
-                    font-weight: 900;
-                    font-size: 1.0em; 
-                    overflow: hidden;
-                    background-color: #000000;
-                    mix-blend-mode: screen; 
-                    padding: 5px 0;
-                }
-                .text-video-bg {
-                    position: absolute;
-                    top: 50%; left: 50%; transform: translate(-50%, -50%);
-                    width: 100%; height: 100%; object-fit: cover; z-index: 0;
-                }
-                .video-purple-overlay {
-                    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-                    background: rgba(139, 92, 246, 0.8); mix-blend-mode: overlay; z-index: 1;
-                }
-                .video-text-layer {
-                    position: relative; color: #fff; background-color: #000000;
-                    mix-blend-mode: multiply; z-index: 10; display: block; padding: 0.1em;
-                }
-            `}</style>
+            {/* Styles are now imported from ./HeroProductWrapper.css */}
         </section>
+    );
+};
+        </section >
     );
 };
 

@@ -1,170 +1,64 @@
-.unified-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
-    gap: 3rem;
+/* SCROLLY TELLING STYLES (Extracted from JSX) */
+
+.scrolly-container {
     position: relative;
-    align-items: start;
-    max-width: 1400px;
-    margin: 0 auto;
+    /* Height is set inline for scroll track */
 }
 
-.content-column {
-    display: flex;
-    flex-direction: column;
-    gap: clamp(3rem, 10vh, 6rem);
+.sticky-viewport {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
 
-.hero-block {
-    min-height: clamp(70vh, 85vh, 90vh);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    scroll-snap-align: start;
+.perspective-container {
+    perspective: 1000px;
 }
 
-.product-block {
-    min-height: clamp(75vh, 90vh, 100vh);
-    padding-top: clamp(3rem, 8vh, 10vh);
-    scroll-snap-align: start;
-}
-
-.hero-header {
-    max-width: 640px;
-    display: flex;
-    flex-direction: column;
-    gap: 1.75rem;
-    align-items: flex-start;
-}
-
-.hero-header .hero-title {
-    margin-bottom: 0;
-}
-
-.hero-header .hero-subtitle {
-    margin: 0;
-    max-width: 36rem;
-}
-
-.hero-header .hero-actions {
-    margin-top: 0.5rem;
-    justify-content: flex-start;
-}
-
-.hero-title-line {
-    display: block;
-}
-
+/* Video Text Mask Effect */
 .video-text-mask-container {
     position: relative;
     display: inline-block;
-    line-height: 1.05;
-    padding: 0.05em 0.1em;
-    border-radius: 12px;
+    line-height: 0.85;
+    font-weight: 900;
+    font-size: 1.0em;
     overflow: hidden;
+    background-color: #000000;
+    mix-blend-mode: screen;
+    padding: 5px 0;
 }
 
 .text-video-bg {
     position: absolute;
-    inset: 0;
-    width: 140%;
-    height: 140%;
-    left: -20%;
-    top: -20%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    opacity: 0.8;
-    filter: saturate(1.2) contrast(1.05);
-    pointer-events: none;
+    z-index: 0;
 }
 
 .video-purple-overlay {
     position: absolute;
-    inset: 0;
-    background: rgba(124, 58, 237, 0.35);
-    mix-blend-mode: screen;
-    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(139, 92, 246, 0.8);
+    mix-blend-mode: overlay;
+    z-index: 1;
 }
 
 .video-text-layer {
     position: relative;
-    z-index: 2;
-    color: var(--text-primary);
-    text-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
-}
-
-.sticky-column {
-    position: relative;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.sticky-wrapper {
-    position: sticky;
-    top: clamp(64px, 10vh, 120px);
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    z-index: 50;
-}
-
-.mobile-phone-container {
-    display: none;
-    margin: 2rem 0;
-    justify-content: center;
-    width: 100%;
-}
-
-@media (max-width: 960px) {
-    .unified-grid {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .content-column {
-        gap: 2.5rem;
-    }
-
-    .sticky-column {
-        display: none;
-    }
-
-    .mobile-phone-container {
-        display: flex;
-        order: 2;
-    }
-
-    .hero-block {
-        order: 1;
-        min-height: auto;
-        padding-top: 100px;
-        padding-bottom: 1rem;
-        text-align: center;
-    }
-
-    .product-block {
-        order: 3;
-        min-height: auto;
-        padding-top: 2rem;
-    }
-
-    .hero-header {
-        align-items: center;
-    }
-
-    .hero-header .hero-actions {
-        justify-content: center;
-    }
-
-    .hero-title,
-    .hero-subtitle,
-    .section-title,
-    .section-desc,
-    .hero-actions {
-        text-align: center;
-        justify-content: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
+    color: #fff;
+    background-color: #000000;
+    mix-blend-mode: multiply;
+    z-index: 10;
+    display: block;
+    padding: 0.1em;
 }
