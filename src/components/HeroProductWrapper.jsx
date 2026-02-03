@@ -1,16 +1,15 @@
 import React, { useState, useRef } from 'react';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import Button from './ui/Button';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import PhoneMockup from './PhoneMockup';
 import './Hero.css';
 import './ProductShowcase.css';
+import './HeroProductWrapper.css';
 
 const HeroProductWrapper = () => {
     const [phoneState, setPhoneState] = useState('hero');
     const containerRef = useRef(null);
-    const productRef = useRef(null);
-
     const { scrollYProgress } = useScroll({
         target: containerRef,
         offset: ["start start", "end end"]
@@ -39,37 +38,41 @@ const HeroProductWrapper = () => {
                 <div className="content-column">
 
                     {/* HERO SECTION CONTENT */}
-                    <div id="hero-start" className="hero-block" style={{ minHeight: '90vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', scrollSnapAlign: 'start' }}>
+                    <div id="hero-start" className="hero-block">
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}
                             viewport={{ once: true }}
                         >
-                            <h1 className="hero-title" style={{ textAlign: 'left' }}>
-                                Artificial Intelligence for <br />
-                                <div className="video-text-mask-container" style={{ fontSize: '1.0em', lineHeight: '1.0', marginTop: '10px', display: 'block' }}>
-                                    <video autoPlay loop muted playsInline className="text-video-bg">
-                                        <source src="assets/club-video3.mp4" type="video/mp4" />
-                                    </video>
-                                    <div className="video-purple-overlay"></div>
-                                    <span className="video-text-layer">Human Connection.</span>
+                            <header className="hero-header">
+                                <h1 className="hero-title">
+                                    <span className="hero-title-line">Artificial Intelligence for</span>
+                                    <span className="hero-title-line">
+                                        <span className="video-text-mask-container">
+                                            <video autoPlay loop muted playsInline className="text-video-bg" aria-hidden="true">
+                                                <source src="assets/club-video3.mp4" type="video/mp4" />
+                                            </video>
+                                            <span className="video-purple-overlay" aria-hidden="true"></span>
+                                            <span className="video-text-layer">Human Connection.</span>
+                                        </span>
+                                    </span>
+                                </h1>
+
+                                <p className="hero-subtitle">
+                                    Costruiamo l'infrastruttura neurale che alimenta la prossima generazione di esperienze sociali.
+                                    Tecnologia predittiva, scalabile, umana.
+                                </p>
+
+                                <div className="hero-actions">
+                                    <Button variant="primary" icon={ArrowRight} onClick={() => document.getElementById('product-start').scrollIntoView({ behavior: 'smooth' })}>
+                                        Esplora la Tecnologia
+                                    </Button>
+                                    <Button variant="secondary" onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>
+                                        Investor Relations
+                                    </Button>
                                 </div>
-                            </h1>
-
-                            <p className="hero-subtitle" style={{ textAlign: 'left', marginLeft: 0 }}>
-                                Costruiamo l'infrastruttura neurale che alimenta la prossima generazione di esperienze sociali.
-                                Tecnologia predittiva, scalabile, umana.
-                            </p>
-
-                            <div className="hero-actions" style={{ justifyContent: 'flex-start' }}>
-                                <Button variant="primary" icon={ArrowRight} onClick={() => document.getElementById('product-start').scrollIntoView({ behavior: 'smooth' })}>
-                                    Esplora la Tecnologia
-                                </Button>
-                                <Button variant="secondary" onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>
-                                    Investor Relations
-                                </Button>
-                            </div>
+                            </header>
                         </motion.div>
                     </div>
 
@@ -79,15 +82,15 @@ const HeroProductWrapper = () => {
                     </div>
 
                     {/* PRODUCT SHOWCASE CONTENT */}
-                    <div id="product-start" ref={productRef} className="product-block" style={{ minHeight: '100vh', paddingTop: '10vh', scrollSnapAlign: 'start' }}>
+                    <div id="product-start" className="product-block">
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.6 }}
                         >
-                            <h2 className="section-title" style={{ textAlign: 'left' }}>L'Interfaccia Utente: <br /><span className="text-gradient">LUCY App.</span></h2>
-                            <p className="section-desc" style={{ textAlign: 'left', marginLeft: 0 }}>
+                            <h2 className="section-title">L'Interfaccia Utente: <br /><span className="text-gradient">LUCY App.</span></h2>
+                            <p className="section-desc">
                                 Il nostro primo touchpoint di mercato. Un ecosistema mobile che dimostra la potenza dei nostri
                                 algoritmi di <strong>matching comportamentale</strong> in tempo reale.
                             </p>
@@ -134,84 +137,6 @@ const HeroProductWrapper = () => {
                 </div>
             </div>
 
-            {/* CSS for Unified Layout */}
-            <style jsx>{`
-                .unified-grid {
-                    display: grid;
-                    /* Desktop: 2 Columns */
-                    grid-template-columns: minmax(0, 1fr) minmax(400px, 1fr); 
-                    gap: 2rem; 
-                    position: relative;
-                    align-items: start; 
-                    max-width: 1400px;
-                    margin: 0 auto;
-                }
-                
-                .sticky-column {
-                    position: relative;
-                    height: 100%;
-                    display: block; /* Visible on desktop */
-                }
-
-                .sticky-wrapper {
-                    position: sticky;
-                    top: 80px; /* Force adjustment to align with Title */
-                    height: auto;
-                    display: flex;
-                    justify-content: center;
-                    align-items: flex-start;
-                    z-index: 50;
-                }
-
-                .mobile-phone-container {
-                    display: none; 
-                    margin: 2rem 0; /* Reduced margin */
-                    justify-content: center;
-                    width: 100%;
-                }
-
-                @media (max-width: 960px) {
-                    .unified-grid {
-                        display: flex;
-                        flex-direction: column;
-                    }
-                    
-                    .content-column {
-                        display: flex;
-                        flex-direction: column;
-                    }
-
-                    .sticky-column {
-                        display: none !important; 
-                    }
-
-                    .mobile-phone-container {
-                        display: flex !important;
-                        order: 2; /* Ensure it is 2nd */
-                    }
-
-                    .hero-block {
-                        order: 1; /* 1st */
-                        min-height: auto !important;
-                        padding-top: 100px;
-                        padding-bottom: 1rem;
-                        text-align: center;
-                    }
-
-                    .product-block {
-                        order: 3; /* 3rd */
-                        min-height: auto !important;
-                        padding-top: 2rem;
-                    }
-                    
-                    /* Force Center everything on mobile */
-                    .hero-title, .hero-subtitle, .section-title, .section-desc, .hero-actions {
-                        text-align: center !important;
-                        justify-content: center !important;
-                        margin-left: auto !important;
-                        margin-right: auto !important;
-                    }
-                }
         </section>
     );
 };

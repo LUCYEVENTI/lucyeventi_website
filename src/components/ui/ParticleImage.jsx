@@ -18,7 +18,16 @@ const ParticleImage = ({ src, alt, delay, size = 120 }) => {
     });
 
     return (
-        <div className="icon-wrapper" style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '1.5rem', width: size + 100, height: size + 100 }}>
+        <div
+            className="icon-wrapper"
+            style={{
+                position: 'relative',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                '--icon-size': `${size}px`
+            }}
+        >
             {/* Particles */}
             {particles.map((p, i) => (
                 <motion.div
@@ -69,8 +78,6 @@ const ParticleImage = ({ src, alt, delay, size = 120 }) => {
                 style={{
                     position: 'relative',
                     zIndex: 21,
-                    width: size,
-                    height: size,
                     objectFit: 'contain'
                 }}
             />

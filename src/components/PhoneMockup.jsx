@@ -62,8 +62,13 @@ const PhoneMockup = ({ state = 'hero' }) => {
     // On mobile, we disable the 3D flip to avoid browser quirks and "upside down" issues.
     // We just switch the z-index or opacity.
 
+    const phoneStyle = {
+        '--phone-width': isMobile ? '260px' : 'clamp(260px, 22vw, 320px)',
+        '--phone-height': isMobile ? '460px' : 'clamp(460px, 62vh, 560px)'
+    };
+
     return (
-        <div className="mockup-frame" style={{ width: isMobile ? '280px' : '300px', height: isMobile ? '500px' : '550px', margin: '0 auto' }}>
+        <div className="mockup-frame" style={phoneStyle}>
             <div className="mockup-screen" style={{ overflow: 'hidden', perspective: '1000px' }}>
                 <div className="mockup-header">
                     <div className="mockup-notch"></div>

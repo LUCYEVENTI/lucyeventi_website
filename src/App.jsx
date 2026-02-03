@@ -36,9 +36,7 @@ function App() {
           <Traction />
         </div>
 
-        <div id="company">
-          <CompanyOverview />
-        </div>
+        <CompanyOverview />
       </main>
 
       {/* Footer ID is inside the component, but we can wrap it or ensure the ID matches */}

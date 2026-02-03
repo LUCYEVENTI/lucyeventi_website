@@ -11,28 +11,38 @@ const sections = [
 ];
 
 const ScrollProgress = () => {
-    const [activeSection, setActiveSection] = useState('hero');
+    const [activeSection, setActiveSection] = useState('hero-start');
 
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        setActiveSection(entry.target.id);
-                    }
-                });
+                const visible = entries.filter((entry) => entry.isIntersecting);
+                if (visible.length === 0) return;
+
+                const mostVisible = visible.reduce((maxEntry, entry) => {
+                    if (!maxEntry) return entry;
+                    return entry.intersectionRatio > maxEntry.intersectionRatio ? entry : maxEntry;
+                }, null);
+
+                if (mostVisible?.target?.id) {
+                    setActiveSection(mostVisible.target.id);
+                }
             },
             {
-                threshold: 0.5 // Trigger when 50% visible
+                threshold: [0.25, 0.5, 0.75]
             }
         );
 
-        sections.forEach(({ id }) => {
-            const element = document.getElementById(id);
-            if (element) observer.observe(element);
-        });
+        const observedElements = sections
+            .map(({ id }) => document.getElementById(id))
+            .filter(Boolean);
 
-        return () => observer.disconnect();
+        observedElements.forEach((element) => observer.observe(element));
+
+        return () => {
+            observedElements.forEach((element) => observer.unobserve(element));
+            observer.disconnect();
+        };
     }, []);
 
     const scrollToSection = (id) => {

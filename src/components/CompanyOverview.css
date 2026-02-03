@@ -65,6 +65,11 @@
     color: var(--text-primary);
 }
 
+.innovation-card .icon-wrapper {
+    --icon-pad: 40px;
+    --icon-margin: 1rem;
+}
+
 /* Ensure canvas/img from ParticleImage is centered */
 .innovation-card canvas,
 .innovation-card img,
