@@ -160,6 +160,9 @@ const HeroProductWrapper = () => {
                     font-weight: 900;
                     /* REMOVED isolation: isolate -> This allows Screen blend to transparentize the black against the site bg */
                     
+                    /* Clips the video to the exact size of the text block */
+                    overflow: hidden;
+
                     /* Pure Black BG + Screen Blend = Transparent Background */
                     background-color: #000000;
                     mix-blend-mode: screen; 
