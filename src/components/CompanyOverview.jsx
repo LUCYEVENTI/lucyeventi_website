@@ -33,6 +33,7 @@ const CompanyOverview = () => {
                 </div>
 
                 {/* 75% Focus: Innovation Pillars */}
+                {/* 75% Focus: Innovation Pillars */}
                 <div className="innovation-grid">
                     <motion.div
                         className="innovation-card"
@@ -41,7 +42,7 @@ const CompanyOverview = () => {
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
                     >
-                        <div className="card-icon"><Cpu size={32} /></div>
+                        <ParticleImage src="assets/icon-ai-core.png" alt="AI Core" delay={0.2} />
                         <h3>AI Core Development</h3>
                         <p>Sviluppiamo modelli predittivi proprietari e agenti autonomi capaci di comprendere comportamenti complessi e ottimizzare esperienze in tempo reale.</p>
                     </motion.div>
@@ -53,7 +54,7 @@ const CompanyOverview = () => {
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
                     >
-                        <div className="card-icon"><Globe size={32} /></div>
+                        <ParticleImage src="assets/icon-global-network.png" alt="Ecosistemi Scalabili" delay={0.4} />
                         <h3>Ecosistemi Scalabili</h3>
                         <p>Costruiamo architetture cloud-native progettate per connettere migliaia di utenti e venue simultaneamente, garantendo affidabilità e velocità.</p>
                     </motion.div>
@@ -65,7 +66,7 @@ const CompanyOverview = () => {
                         viewport={{ once: true }}
                         transition={{ delay: 0.3 }}
                     >
-                        <div className="card-icon"><Zap size={32} /></div>
+                        <ParticleImage src="assets/icon-innovation.png" alt="R&D Continuo" delay={0.6} />
                         <h3>R&D Continuo</h3>
                         <p>Investiamo costantemente in ricerca e sviluppo per integrare le ultime frontiere del Machine Learning nei nostri prodotti e servizi B2B.</p>
                     </motion.div>
@@ -92,7 +93,7 @@ const CompanyOverview = () => {
                     </div>
                     <div className="product-visual">
                         <div className="product-visual-abstract"></div>
-                        <Rocket size={120} className="relative z-10 text-white opacity-90 drop-shadow-lg" />
+                        <img src="assets/icon-rocket-launch.png" alt="Lucy App Launch" style={{ width: '180px', height: '180px', objectFit: 'contain', position: 'relative', zIndex: 10, filter: 'drop-shadow(0 0 20px rgba(124, 58, 237, 0.5))' }} />
                     </div>
                 </motion.div>
 
