@@ -90,9 +90,22 @@ const CompanyOverview = () => {
                             {/* Launch Badge Removed */}
                         </div>
                     </div>
-                    <div className="product-visual">
+                    <div className="product-visual" style={{ overflow: 'visible' }}>
                         <div className="product-visual-abstract"></div>
-                        <img src="assets/icon-rocket-launch.png" alt="Lucy App Launch" style={{ width: '180px', height: '180px', objectFit: 'contain', position: 'relative', zIndex: 10, filter: 'drop-shadow(0 0 20px rgba(124, 58, 237, 0.5))' }} />
+                        <img
+                            src="assets/icon-rocket-launch.png"
+                            alt="Lucy App Launch"
+                            className="rocket-3d-anim"
+                            style={{
+                                width: '220px',
+                                height: '220px',
+                                objectFit: 'contain',
+                                position: 'relative',
+                                zIndex: 10,
+                                filter: 'drop-shadow(0 10px 30px rgba(124, 58, 237, 0.6))',
+                                margin: '-40px'
+                            }}
+                        />
                     </div>
                 </motion.div>
 
