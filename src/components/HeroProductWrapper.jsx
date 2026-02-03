@@ -48,7 +48,7 @@ const HeroProductWrapper = () => {
                         >
                             <h1 className="hero-title" style={{ textAlign: 'left' }}>
                                 Artificial Intelligence for <br />
-                                <div className="video-text-mask-container" style={{ fontSize: '1.5em', lineHeight: '1.0', marginTop: '10px', display: 'block' }}>
+                                <div className="video-text-mask-container" style={{ fontSize: '1.0em', lineHeight: '1.0', marginTop: '10px', display: 'block' }}>
                                     <video autoPlay loop muted playsInline className="text-video-bg">
                                         <source src="assets/club-video3.mp4" type="video/mp4" />
                                     </video>
@@ -158,8 +158,8 @@ const HeroProductWrapper = () => {
                     display: inline-block;
                     line-height: 0.85; 
                     font-weight: 900;
-                    /* Reduced font size by 40% (was 2.5em) */
-                    font-size: 1.5em; 
+                    /* Further Reduced font size (was 1.5em, now 1.0em = 100% of parent H1) */
+                    font-size: 1.0em; 
                     
                     /* Clips the video to the exact size of the text block */
                     overflow: hidden;
