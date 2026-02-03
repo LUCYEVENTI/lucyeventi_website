@@ -48,7 +48,7 @@ const HeroProductWrapper = () => {
                         >
                             <h1 className="hero-title" style={{ textAlign: 'left' }}>
                                 Artificial Intelligence for <br />
-                                <div className="video-text-mask-container" style={{ fontSize: '1.4em' }}>
+                                <div className="video-text-mask-container" style={{ fontSize: '2.5em', lineHeight: '1.0', marginTop: '10px', display: 'block' }}>
                                     <video autoPlay loop muted playsInline className="text-video-bg">
                                         <source src="assets/club-video3.mp4" type="video/mp4" />
                                     </video>

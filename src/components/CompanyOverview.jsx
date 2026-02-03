@@ -41,7 +41,7 @@ const CompanyOverview = () => {
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
                     >
-                        <ParticleImage src="assets/icon-ai-core.png" alt="AI Core" delay={0.2} />
+                        <ParticleImage src="assets/icon-ai-core.png" alt="AI Core" delay={0.2} size={170} />
                         <h3>AI Core Development</h3>
                         <p>Sviluppiamo modelli predittivi proprietari e agenti autonomi capaci di comprendere comportamenti complessi e ottimizzare esperienze in tempo reale.</p>
                     </motion.div>
@@ -53,7 +53,7 @@ const CompanyOverview = () => {
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
                     >
-                        <ParticleImage src="assets/icon-global-network.png" alt="Ecosistemi Scalabili" delay={0.4} />
+                        <ParticleImage src="assets/icon-global-network.png" alt="Ecosistemi Scalabili" delay={0.4} size={170} />
                         <h3>Ecosistemi Scalabili</h3>
                         <p>Costruiamo architetture cloud-native progettate per connettere migliaia di utenti e venue simultaneamente, garantendo affidabilità e velocità.</p>
                     </motion.div>
@@ -65,7 +65,7 @@ const CompanyOverview = () => {
                         viewport={{ once: true }}
                         transition={{ delay: 0.3 }}
                     >
-                        <ParticleImage src="assets/icon-innovation.png" alt="R&D Continuo" delay={0.6} />
+                        <ParticleImage src="assets/icon-innovation.png" alt="R&D Continuo" delay={0.6} size={170} />
                         <h3>R&D Continuo</h3>
                         <p>Investiamo costantemente in ricerca e sviluppo per integrare le ultime frontiere del Machine Learning nei nostri prodotti e servizi B2B.</p>
                     </motion.div>
@@ -97,13 +97,14 @@ const CompanyOverview = () => {
                             alt="Lucy App Launch"
                             className="rocket-3d-anim"
                             style={{
-                                width: '220px',
-                                height: '220px',
+                                width: '380px',
+                                height: '380px',
                                 objectFit: 'contain',
                                 position: 'relative',
                                 zIndex: 10,
-                                filter: 'drop-shadow(0 10px 30px rgba(124, 58, 237, 0.6))',
-                                margin: '-40px'
+                                filter: 'drop-shadow(0 20px 50px rgba(124, 58, 237, 0.5))',
+                                margin: '-80px',
+                                transform: 'scale(1.1)'
                             }}
                         />
                     </div>
