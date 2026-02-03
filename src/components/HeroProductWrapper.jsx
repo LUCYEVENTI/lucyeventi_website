@@ -133,13 +133,18 @@ const HeroProductWrapper = () => {
             <style jsx>{`
                 .unified-grid {
                     display: grid;
-                    grid-template-columns: 1fr 1fr; /* 50% 50% split */
-                    gap: 4rem;
+                    /* Using minmax to prevent columns from collapsing too small and forcing wrap prematurely on desktop */
+                    grid-template-columns: minmax(0, 1fr) minmax(400px, 1fr); 
+                    gap: 2rem; /* Reduced gap to bring phone closer */
                     position: relative;
+                    align-items: center; /* Vertically align content and phone */
+                    max-width: 1400px;
+                    margin: 0 auto;
                 }
                 
                 .sticky-column {
                     position: relative;
+                    height: 100%; /* Ensure full height for sticky positioning context */
                 }
 
                 .sticky-wrapper {
