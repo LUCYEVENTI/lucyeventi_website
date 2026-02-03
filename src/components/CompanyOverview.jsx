@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Rocket } from 'lucide-react';
 import ParticleImage from './ui/ParticleImage';
 import './CompanyOverview.css';
 
