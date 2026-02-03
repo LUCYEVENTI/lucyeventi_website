@@ -155,48 +155,62 @@ const HeroProductWrapper = () => {
 
                 .sticky-wrapper {
                     position: sticky;
-                    top: 100px; /* Aligned closer to the top to match Hero Title */
+                    top: 80px; /* Force adjustment to align with Title */
                     height: auto;
                     display: flex;
                     justify-content: center;
-                    align-items: flex-start; /* Align top */
+                    align-items: flex-start;
+                    z-index: 50;
                 }
 
                 .mobile-phone-container {
-                    display: none; /* Hidden on Desktop */
-                    margin: 4rem 0;
+                    display: none; 
+                    margin: 2rem 0; /* Reduced margin */
                     justify-content: center;
+                    width: 100%;
                 }
-
-                /* ... existing video styles ... */
 
                 @media (max-width: 960px) {
                     .unified-grid {
-                        grid-template-columns: 1fr; /* Stack on mobile */
+                        display: flex;
+                        flex-direction: column;
                     }
                     
-                    /* Hide the desktop sticky column on mobile to prevent duplication/spacing issues */
-                    .sticky-column {
-                        display: none; 
+                    .content-column {
+                        display: flex;
+                        flex-direction: column;
                     }
 
-                    /* Show the mobile phone container */
+                    .sticky-column {
+                        display: none !important; 
+                    }
+
                     .mobile-phone-container {
-                        display: flex;
+                        display: flex !important;
+                        order: 2; /* Ensure it is 2nd */
                     }
 
                     .hero-block {
+                        order: 1; /* 1st */
                         min-height: auto !important;
                         padding-top: 100px;
-                        padding-bottom: 2rem;
+                        padding-bottom: 1rem;
                         text-align: center;
                     }
+
                     .product-block {
+                        order: 3; /* 3rd */
                         min-height: auto !important;
                         padding-top: 2rem;
                     }
                     
-                    /* ... existing mobile styles ... */
+                    /* Force Center everything on mobile */
+                    .hero-title, .hero-subtitle, .section-title, .section-desc, .hero-actions {
+                        text-align: center !important;
+                        justify-content: center !important;
+                        margin-left: auto !important;
+                        margin-right: auto !important;
+                    }
                 }
         </section>
     );

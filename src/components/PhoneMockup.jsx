@@ -63,7 +63,7 @@ const PhoneMockup = ({ state = 'hero' }) => {
     // We just switch the z-index or opacity.
 
     return (
-        <div className="mockup-frame" style={{ width: isMobile ? '280px' : '320px', height: isMobile ? '580px' : '650px', margin: '0 auto' }}>
+        <div className="mockup-frame" style={{ width: isMobile ? '280px' : '300px', height: isMobile ? '500px' : '550px', margin: '0 auto' }}>
             <div className="mockup-screen" style={{ overflow: 'hidden', perspective: '1000px' }}>
                 <div className="mockup-header">
                     <div className="mockup-notch"></div>
