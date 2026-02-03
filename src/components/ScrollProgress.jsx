@@ -6,7 +6,7 @@ const sections = [
     { id: 'product-start', label: 'App' },
     { id: 'tech', label: 'Ecosistema' },
     { id: 'traction', label: 'Dati' },
-    { id: 'team', label: 'Team' },
+    { id: 'company', label: 'Visione' },
     { id: 'contact', label: 'Contattaci' }
 ];
 
