@@ -157,11 +157,14 @@ const HeroProductWrapper = () => {
                     position: relative;
                     display: inline-block;
                     /* Ensure exact clipping to text bounding box */
-                    line-height: 0.9;
-                    font-weight: 800;
+                    line-height: 0.85;
+                    font-weight: 900; /* Max weight */
                     isolation: isolate; 
-                    /* Fix for 'rectangle visible outside': Force bg to match site */
-                    background-color: #0B0F14;
+                    /* Pure Black BG + Screen Blend = Transparent Background */
+                    background-color: #000000;
+                    mix-blend-mode: screen; 
+                    /* Slight breathing room */
+                    padding: 10px 0;
                 }
 
                 .text-video-bg {
@@ -183,20 +186,20 @@ const HeroProductWrapper = () => {
                     left: 0;
                     width: 100%;
                     height: 100%;
-                    background: rgba(124, 58, 237, 0.4); /* Purple tint */
+                    background: rgba(139, 92, 246, 0.6); /* Vibrant Purple */
                     mix-blend-mode: overlay;
                     z-index: 1;
                 }
 
                 .video-text-layer {
                     position: relative;
-                    /* Text is WHITE (transparent in multiply), Background is BLACK (opaque) */
+                    /* Text is WHITE (Video), Background is BLACK (Transparent via Screen) */
                     color: #fff;
-                    background-color: #0B0F14;
+                    background-color: #000000;
                     mix-blend-mode: multiply; 
                     z-index: 10;
                     display: block;
-                    padding: 0.05em 0.1em; /* Slight padding */
+                    padding: 0.1em 0.1em;
                 }
 
                 @media (max-width: 960px) {
