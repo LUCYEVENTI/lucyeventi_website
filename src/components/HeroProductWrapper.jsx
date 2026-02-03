@@ -156,15 +156,15 @@ const HeroProductWrapper = () => {
                 .video-text-mask-container {
                     position: relative;
                     display: inline-block;
-                    /* Ensure exact clipping to text bounding box */
-                    line-height: 0.85;
-                    font-weight: 900; /* Max weight */
-                    isolation: isolate; 
+                    line-height: 0.85; /* Tight fit */
+                    font-weight: 900;
+                    /* REMOVED isolation: isolate -> This allows Screen blend to transparentize the black against the site bg */
+                    
                     /* Pure Black BG + Screen Blend = Transparent Background */
                     background-color: #000000;
                     mix-blend-mode: screen; 
-                    /* Slight breathing room */
-                    padding: 10px 0;
+                    /* Minimal padding */
+                    padding: 5px 0;
                 }
 
                 .text-video-bg {
@@ -172,10 +172,8 @@ const HeroProductWrapper = () => {
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    min-width: 100%;
-                    min-height: 100%;
-                    width: auto;
-                    height: auto;
+                    width: 100%;
+                    height: 100%;
                     object-fit: cover;
                     z-index: 0;
                 }
@@ -186,7 +184,7 @@ const HeroProductWrapper = () => {
                     left: 0;
                     width: 100%;
                     height: 100%;
-                    background: rgba(139, 92, 246, 0.6); /* Vibrant Purple */
+                    background: rgba(139, 92, 246, 0.8); /* Stronger Purple to composite well */
                     mix-blend-mode: overlay;
                     z-index: 1;
                 }
@@ -199,7 +197,7 @@ const HeroProductWrapper = () => {
                     mix-blend-mode: multiply; 
                     z-index: 10;
                     display: block;
-                    padding: 0.1em 0.1em;
+                    padding: 0.1em;
                 }
 
                 @media (max-width: 960px) {
