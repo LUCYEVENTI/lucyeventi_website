@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import HeroProductWrapper from './components/HeroProductWrapper';
 
 import CoreTech, { Traction } from './components/CoreTech';
-import Team from './components/Team';
+import CompanyOverview from './components/CompanyOverview';
 import Footer from './components/Footer';
 import ScrollProgress from './components/ScrollProgress'; // Import Progress
 import { motion, useScroll, useSpring } from 'framer-motion';
@@ -36,8 +36,8 @@ function App() {
           <Traction />
         </div>
 
-        <div id="team">
-          <Team />
+        <div id="company">
+          <CompanyOverview />
         </div>
       </main>
 
