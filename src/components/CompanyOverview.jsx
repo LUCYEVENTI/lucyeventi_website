@@ -5,7 +5,7 @@ import './CompanyOverview.css';
 
 const CompanyOverview = () => {
     return (
-        <section className="section-padding bg-surface company-overview-section">
+        <section id="company" className="section-padding bg-surface company-overview-section">
             <div className="container">
                 {/* Intro Header */}
                 <div className="text-center mb-16">

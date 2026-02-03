@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const ParticleImage = ({ src, alt, delay }) => {
+const ParticleImage = ({ src, alt, delay, size = 120 }) => {
     // Generate static random positions for particles
     const particleCount = 12;
-    const radius = 60; // Spread radius
+    const radius = size / 2 + 20; // Dynamic radius based on size
 
     const particles = Array.from({ length: particleCount }).map((_, i) => {
         const angle = (i / particleCount) * 2 * Math.PI;
@@ -18,7 +18,7 @@ const ParticleImage = ({ src, alt, delay }) => {
     });
 
     return (
-        <div className="icon-wrapper" style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '1.5rem' }}>
+        <div className="icon-wrapper" style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '1.5rem', width: size + 100, height: size + 100 }}>
             {/* Particles */}
             {particles.map((p, i) => (
                 <motion.div
@@ -69,8 +69,8 @@ const ParticleImage = ({ src, alt, delay }) => {
                 style={{
                     position: 'relative',
                     zIndex: 21,
-                    width: '64px', // Default size matching existing usage
-                    height: '64px',
+                    width: size,
+                    height: size,
                     objectFit: 'contain'
                 }}
             />

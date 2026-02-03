@@ -48,10 +48,11 @@ const HeroProductWrapper = () => {
                         >
                             <h1 className="hero-title" style={{ textAlign: 'left' }}>
                                 Artificial Intelligence for <br />
-                                <div className="video-text-mask-container">
+                                <div className="video-text-mask-container" style={{ fontSize: '1.4em' }}>
                                     <video autoPlay loop muted playsInline className="text-video-bg">
                                         <source src="assets/club-video3.mp4" type="video/mp4" />
                                     </video>
+                                    <div className="video-purple-overlay"></div>
                                     <span className="video-text-layer">Human Connection.</span>
                                 </div>
                             </h1>
@@ -155,35 +156,47 @@ const HeroProductWrapper = () => {
                 .video-text-mask-container {
                     position: relative;
                     display: inline-block;
-                    overflow: hidden;
-                    /* Adjust size slightly larger as requested */
-                    font-size: 1.1em;
+                    /* Ensure exact clipping to text bounding box */
+                    line-height: 0.9;
                     font-weight: 800;
-                    line-height: 1.1;
-                    isolation: isolate; /* Create stacking context */
+                    isolation: isolate; 
+                    /* Fix for 'rectangle visible outside': Force bg to match site */
+                    background-color: #0B0F14;
                 }
 
                 .text-video-bg {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    min-width: 100%;
+                    min-height: 100%;
+                    width: auto;
+                    height: auto;
+                    object-fit: cover;
+                    z-index: 0;
+                }
+
+                .video-purple-overlay {
                     position: absolute;
                     top: 0;
                     left: 0;
                     width: 100%;
                     height: 100%;
-                    object-fit: cover;
-                    /* Lower z-index */
-                    z-index: 0;
+                    background: rgba(124, 58, 237, 0.4); /* Purple tint */
+                    mix-blend-mode: overlay;
+                    z-index: 1;
                 }
 
                 .video-text-layer {
                     position: relative;
-                    /* Text is WHITE, Background is DARK (matching site bg) */
+                    /* Text is WHITE (transparent in multiply), Background is BLACK (opaque) */
                     color: #fff;
-                    background-color: #0B0F14; /* Matches --bg-dark */
-                    /* Multiply blend mode: White * Video = Video. Dark * Video = Dark. */
+                    background-color: #0B0F14;
                     mix-blend-mode: multiply; 
                     z-index: 10;
                     display: block;
-                    padding: 0.1em 0; /* Slight padding to ensure coverage */
+                    padding: 0.05em 0.1em; /* Slight padding */
                 }
 
                 @media (max-width: 960px) {
