@@ -135,9 +135,10 @@ const HeroProductWrapper = () => {
                     display: grid;
                     /* Using minmax to prevent columns from collapsing too small and forcing wrap prematurely on desktop */
                     grid-template-columns: minmax(0, 1fr) minmax(400px, 1fr); 
-                    gap: 2rem; /* Reduced gap to bring phone closer */
+                    gap: 2rem; 
                     position: relative;
-                    align-items: center; /* Vertically align content and phone */
+                    /* align-items: center REMOVED to allow columns to stretch full height for sticky behavior */
+                    align-items: start; 
                     max-width: 1400px;
                     margin: 0 auto;
                 }

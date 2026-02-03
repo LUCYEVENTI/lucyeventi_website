@@ -45,15 +45,27 @@ const CompanyOverview = () => {
 
                 {/* 75% Focus: Innovation Pillars */}
                 {/* 75% Focus: Innovation Pillars */}
-                <div className="innovation-grid">
+                {/* 75% Focus: Innovation Pillars */}
+                <motion.div
+                    className="innovation-grid"
+                    variants={{
+                        hidden: { opacity: 0 },
+                        visible: {
+                            opacity: 1,
+                            transition: {
+                                staggerChildren: 0.3
+                            }
+                        }
+                    }}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                >
                     <motion.div
                         className="innovation-card"
                         variants={itemVariants}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
                     >
-                        <ParticleImage src="assets/icon-ai-core.png" alt="AI Core" delay={0.2} size={290} />
+                        <ParticleImage src="assets/icon-ai-core.png" alt="AI Core" delay={0.2} size={350} />
                         <h3>AI Core Development</h3>
                         <p>Sviluppiamo modelli predittivi proprietari e agenti autonomi capaci di comprendere comportamenti complessi e ottimizzare esperienze in tempo reale.</p>
                     </motion.div>
@@ -61,11 +73,8 @@ const CompanyOverview = () => {
                     <motion.div
                         className="innovation-card"
                         variants={itemVariants}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
                     >
-                        <ParticleImage src="assets/icon-global-network.png" alt="Ecosistemi Scalabili" delay={0.4} size={290} />
+                        <ParticleImage src="assets/icon-global-network.png" alt="Ecosistemi Scalabili" delay={0.4} size={350} />
                         <h3>Ecosistemi Scalabili</h3>
                         <p>Costruiamo architetture cloud-native progettate per connettere migliaia di utenti e venue simultaneamente, garantendo affidabilità e velocità.</p>
                     </motion.div>
@@ -73,15 +82,12 @@ const CompanyOverview = () => {
                     <motion.div
                         className="innovation-card"
                         variants={itemVariants}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
                     >
-                        <ParticleImage src="assets/icon-innovation.png" alt="R&D Continuo" delay={0.6} size={290} />
+                        <ParticleImage src="assets/icon-innovation.png" alt="R&D Continuo" delay={0.6} size={350} />
                         <h3>R&D Continuo</h3>
                         <p>Investiamo costantemente in ricerca e sviluppo per integrare le ultime frontiere del Machine Learning nei nostri prodotti e servizi B2B.</p>
                     </motion.div>
-                </div>
+                </motion.div>
 
                 {/* 25% Focus: The Product */}
                 <motion.div
