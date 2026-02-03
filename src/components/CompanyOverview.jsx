@@ -25,8 +25,8 @@ const CompanyOverview = () => {
                         transition={{ delay: 0.2 }}
                     >
                         <p className="intro-lead">
-                            Non siamo solo un'app. Siamo un laboratorio di intelligenza artificiale dedicato a costruire
-                            l'infrastruttura tecnologica del futuro. Il nostro focus è l'innovazione radicale.
+                            Lucy Technologies è una società di ricerca e sviluppo focalizzata sull'intelligenza artificiale applicata.
+                            Progettiamo infrastrutture neurali per ottimizzare le interazioni umane e i modelli di business nel settore dell'intrattenimento.
                         </p>
                     </motion.div>
                 </div>
@@ -79,15 +79,14 @@ const CompanyOverview = () => {
                     transition={{ delay: 0.4 }}
                 >
                     <div className="product-content">
-                        <span className="product-label">Il Nostro Primo Passo</span>
+                        <span className="product-label">Product Division</span>
                         <h3 className="text-3xl font-bold mb-4 text-white">LUCY App</h3>
                         <p className="text-lg text-gray-300 mb-6">
-                            L'applicazione mobile LUCY è la prima manifestazione tangibile della nostra tecnologia.
-                            Portiamo la potenza degli algoritmi di matching e dell'analisi dati direttamente
-                            nelle mani degli utenti per rivoluzionare la nightlife.
+                            L'applicazione mobile rappresenta l'interfaccia utente del nostro ecosistema.
+                            Uno strumento che traduce la complessità dei nostri algoritmi in un'esperienza d'uso fluida e intuitiva.
                         </p>
                         <div className="flex gap-4">
-                            <span className="text-sm font-mono text-accent-secondary opacity-80">v1.0 Launching Soon</span>
+                            {/* Launch Badge Removed */}
                         </div>
                     </div>
                     <div className="product-visual">
