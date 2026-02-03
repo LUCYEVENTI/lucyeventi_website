@@ -16,10 +16,10 @@ const ProductShowcase = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                     >
-                        <h2 className="section-title">Non solo un'app. <br /><span className="text-gradient">Un ecosistema.</span></h2>
+                        <h2 className="section-title">Ecosistema <br /><span className="text-gradient">Mobile Integrato.</span></h2>
                         <p className="section-desc">
-                            Eventi Hub non è la solita lista di serate. È un <strong>Concierge AI Personale</strong>
-                            &nbsp;che apprende dai tuoi gusti, connette le persone e offre strumenti potenti ai gestori.
+                            LUCY App agisce come terminale utente per la nostra infrastruttura intelligente,
+                            offrendo un'esperienza di scoperta personalizzata e strumenti di gestione avanzati.
                         </p>
 
                         <ul className="feature-list">
