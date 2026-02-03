@@ -46,19 +46,19 @@ const CoreTech = () => {
                     viewport={{ once: true, margin: "-100px" }}
                 >
                     <Card variants={itemVariants} className="tech-card">
-                        <ParticleImage src="assets/icon-ai-matching.png" alt="AI Matching" delay={0.2} size={350} />
+                        <ParticleImage src="assets/icon-ai-matching.png" alt="AI Matching" delay={0.2} size={260} />
                         <h3>Behavioral Alignment Engine</h3>
                         <p>Motore neurale proprietario che trasforma i dati grezzi in intenti utente azionabili.</p>
                     </Card>
 
                     <Card variants={itemVariants} className="tech-card">
-                        <ParticleImage src="assets/icon-analytics.png" alt="Analytics" delay={0.4} size={350} />
+                        <ParticleImage src="assets/icon-analytics.png" alt="Analytics" delay={0.4} size={260} />
                         <h3>Predictive Market Intelligence</h3>
                         <p>Modelli di forecasting avanzati per l'ottimizzazione dinamica delle revenue e l'analisi dei flussi.</p>
                     </Card>
 
                     <Card variants={itemVariants} className="tech-card">
-                        <ParticleImage src="assets/icon-cloud.png" alt="Cloud" delay={0.6} size={350} />
+                        <ParticleImage src="assets/icon-cloud.png" alt="Cloud" delay={0.6} size={260} />
                         <h3>High-Concurrency Cloud</h3>
                         <p>Infrastruttura serverless geo-distribuita progettata per latenza millisecondi e uptime 99.9%.</p>
                     </Card>

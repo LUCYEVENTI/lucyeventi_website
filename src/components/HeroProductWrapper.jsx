@@ -73,6 +73,11 @@ const HeroProductWrapper = () => {
                         </motion.div>
                     </div>
 
+                    {/* MOBILE ONLY PHONE: Inserted here to appear between Hero and Product on mobile */}
+                    <div className="mobile-phone-container">
+                        <PhoneMockup state={phoneState} />
+                    </div>
+
                     {/* PRODUCT SHOWCASE CONTENT */}
                     <div id="product-start" ref={productRef} className="product-block" style={{ minHeight: '100vh', paddingTop: '10vh', scrollSnapAlign: 'start' }}>
                         <motion.div
@@ -133,11 +138,10 @@ const HeroProductWrapper = () => {
             <style jsx>{`
                 .unified-grid {
                     display: grid;
-                    /* Using minmax to prevent columns from collapsing too small and forcing wrap prematurely on desktop */
+                    /* Desktop: 2 Columns */
                     grid-template-columns: minmax(0, 1fr) minmax(400px, 1fr); 
                     gap: 2rem; 
                     position: relative;
-                    /* align-items: center REMOVED to allow columns to stretch full height for sticky behavior */
                     align-items: start; 
                     max-width: 1400px;
                     margin: 0 auto;
@@ -145,102 +149,55 @@ const HeroProductWrapper = () => {
                 
                 .sticky-column {
                     position: relative;
-                    height: 100%; /* Ensure full height for sticky positioning context */
+                    height: 100%;
+                    display: block; /* Visible on desktop */
                 }
 
                 .sticky-wrapper {
                     position: sticky;
-                    top: 50%;
-                    transform: translateY(-50%);
+                    top: 100px; /* Aligned closer to the top to match Hero Title */
                     height: auto;
                     display: flex;
                     justify-content: center;
-                    align-items: center;
+                    align-items: flex-start; /* Align top */
                 }
 
-                /* Video Text Mask Effect */
-                .video-text-mask-container {
-                    position: relative;
-                    display: inline-block;
-                    line-height: 0.85; 
-                    font-weight: 900;
-                    /* Further Reduced font size (was 1.5em, now 1.0em = 100% of parent H1) */
-                    font-size: 1.0em; 
-                    
-                    /* Clips the video to the exact size of the text block */
-                    overflow: hidden;
-
-                    /* Pure Black BG + Screen Blend = Transparent Background */
-                    background-color: #000000;
-                    mix-blend-mode: screen; 
-                    /* Minimal padding */
-                    padding: 5px 0;
+                .mobile-phone-container {
+                    display: none; /* Hidden on Desktop */
+                    margin: 4rem 0;
+                    justify-content: center;
                 }
 
-                .text-video-bg {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    z-index: 0;
-                }
-
-                .video-purple-overlay {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background: rgba(139, 92, 246, 0.8); /* Stronger Purple to composite well */
-                    mix-blend-mode: overlay;
-                    z-index: 1;
-                }
-
-                .video-text-layer {
-                    position: relative;
-                    /* Text is WHITE (Video), Background is BLACK (Transparent via Screen) */
-                    color: #fff;
-                    background-color: #000000;
-                    mix-blend-mode: multiply; 
-                    z-index: 10;
-                    display: block;
-                    padding: 0.1em;
-                }
+                /* ... existing video styles ... */
 
                 @media (max-width: 960px) {
                     .unified-grid {
-                        grid-template-columns: 1fr;
+                        grid-template-columns: 1fr; /* Stack on mobile */
                     }
-                    .sticky-wrapper {
-                        position: relative;
-                        top: 0;
-                        transform: none;
-                        margin: 4rem 0;
+                    
+                    /* Hide the desktop sticky column on mobile to prevent duplication/spacing issues */
+                    .sticky-column {
+                        display: none; 
                     }
+
+                    /* Show the mobile phone container */
+                    .mobile-phone-container {
+                        display: flex;
+                    }
+
                     .hero-block {
                         min-height: auto !important;
                         padding-top: 100px;
-                        padding-bottom: 4rem;
+                        padding-bottom: 2rem;
                         text-align: center;
-                        align-items: center !important;
                     }
                     .product-block {
                         min-height: auto !important;
-                        padding-top: 4rem;
+                        padding-top: 2rem;
                     }
-                    .hero-content, .hero-title, .hero-subtitle, .section-title, .section-desc {
-                        text-align: center !important;
-                        margin-left: auto !important;
-                        margin-right: auto !important;
-                    }
-                    .badge-wrapper, .hero-actions {
-                        justify-content: center !important;
-                    }
+                    
+                    /* ... existing mobile styles ... */
                 }
-            `}</style>
         </section>
     );
 };
