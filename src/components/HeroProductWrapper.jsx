@@ -48,7 +48,12 @@ const HeroProductWrapper = () => {
                         >
                             <h1 className="hero-title" style={{ textAlign: 'left' }}>
                                 Artificial Intelligence for <br />
-                                <span className="text-gradient">Human Connection.</span>
+                                <div className="video-text-mask-container">
+                                    <video autoPlay loop muted playsInline className="text-video-bg">
+                                        <source src="assets/club-video3.mp4" type="video/mp4" />
+                                    </video>
+                                    <span className="video-text-layer">Human Connection.</span>
+                                </div>
                             </h1>
 
                             <p className="hero-subtitle" style={{ textAlign: 'left', marginLeft: 0 }}>
@@ -144,6 +149,41 @@ const HeroProductWrapper = () => {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                }
+
+                /* Video Text Mask Effect */
+                .video-text-mask-container {
+                    position: relative;
+                    display: inline-block;
+                    overflow: hidden;
+                    /* Adjust size slightly larger as requested */
+                    font-size: 1.1em;
+                    font-weight: 800;
+                    line-height: 1.1;
+                    isolation: isolate; /* Create stacking context */
+                }
+
+                .text-video-bg {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    /* Lower z-index */
+                    z-index: 0;
+                }
+
+                .video-text-layer {
+                    position: relative;
+                    /* Text is WHITE, Background is DARK (matching site bg) */
+                    color: #fff;
+                    background-color: #0B0F14; /* Matches --bg-dark */
+                    /* Multiply blend mode: White * Video = Video. Dark * Video = Dark. */
+                    mix-blend-mode: multiply; 
+                    z-index: 10;
+                    display: block;
+                    padding: 0.1em 0; /* Slight padding to ensure coverage */
                 }
 
                 @media (max-width: 960px) {

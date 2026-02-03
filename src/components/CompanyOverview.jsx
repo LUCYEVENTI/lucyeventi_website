@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Cpu, Globe, Rocket, Zap } from 'lucide-react';
+import { Rocket } from 'lucide-react';
+import ParticleImage from './ui/ParticleImage';
 import './CompanyOverview.css';
 
 const CompanyOverview = () => {
