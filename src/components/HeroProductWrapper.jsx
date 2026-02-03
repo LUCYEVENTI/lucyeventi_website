@@ -48,20 +48,20 @@ const HeroProductWrapper = () => {
                         >
                             <h1 className="hero-title" style={{ textAlign: 'left' }}>
                                 Artificial Intelligence for <br />
-                                <span className="text-gradient">Real Experiences.</span>
+                                <span className="text-gradient">Human Connection.</span>
                             </h1>
 
                             <p className="hero-subtitle" style={{ textAlign: 'left', marginLeft: 0 }}>
-                                LucyEventi ridefinisce l'intrattenimento unendo ecosistemi digitali intelligenti
-                                e design premium per creare connessioni reali.
+                                Costruiamo l'infrastruttura neurale che alimenta la prossima generazione di esperienze sociali.
+                                Tecnologia predittiva, scalabile, umana.
                             </p>
 
                             <div className="hero-actions" style={{ justifyContent: 'flex-start' }}>
                                 <Button variant="primary" icon={ArrowRight} onClick={() => document.getElementById('product-start').scrollIntoView({ behavior: 'smooth' })}>
-                                    Scopri il Prodotto
+                                    Esplora la Tecnologia
                                 </Button>
                                 <Button variant="secondary" onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>
-                                    Contattaci
+                                    Investor Relations
                                 </Button>
                             </div>
                         </motion.div>
@@ -75,10 +75,10 @@ const HeroProductWrapper = () => {
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.6 }}
                         >
-                            <h2 className="section-title" style={{ textAlign: 'left' }}>Non solo un'app. <br /><span className="text-gradient">Un ecosistema.</span></h2>
+                            <h2 className="section-title" style={{ textAlign: 'left' }}>L'Interfaccia Utente: <br /><span className="text-gradient">LUCY App.</span></h2>
                             <p className="section-desc" style={{ textAlign: 'left', marginLeft: 0 }}>
-                                Eventi Hub non è la solita lista di serate. È un <strong>Concierge AI Personale</strong>
-                                &nbsp;che apprende dai tuoi gusti, connette le persone e offre strumenti potenti ai gestori.
+                                Il nostro primo touchpoint di mercato. Un ecosistema mobile che dimostra la potenza dei nostri
+                                algoritmi di <strong>matching comportamentale</strong> in tempo reale.
                             </p>
 
                             <ul className="feature-list">
@@ -87,8 +87,8 @@ const HeroProductWrapper = () => {
                                         <img src="assets/icon-smart-match.png" alt="Smart Match" className="feature-icon-img" />
                                     </div>
                                     <div>
-                                        <h3>Smart Matching</h3>
-                                        <p>Algoritmi proprietari che ti mostrano solo eventi affini al tuo vibe.</p>
+                                        <h3>Neural Matching Core</h3>
+                                        <p>Analisi multi-vettoriale delle preferenze per connessioni ad alta precisione.</p>
                                     </div>
                                 </motion.li>
                                 <motion.li className="feature-item" whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -20 }} transition={{ delay: 0.2 }}>
@@ -96,8 +96,8 @@ const HeroProductWrapper = () => {
                                         <img src="assets/icon-security.png" alt="Security" className="feature-icon-img" />
                                     </div>
                                     <div>
-                                        <h3>Community Sicura</h3>
-                                        <p>Interazioni real-time verificate e sistema di feedback garantito.</p>
+                                        <h3>Verified Trust Protocol</h3>
+                                        <p>Sistema di sicurezza decentralizzato basato su feedback verificati e identità reale.</p>
                                     </div>
                                 </motion.li>
                                 <motion.li className="feature-item" whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -20 }} transition={{ delay: 0.3 }}>
@@ -105,8 +105,8 @@ const HeroProductWrapper = () => {
                                         <img src="assets/icon-business.png" alt="Business" className="feature-icon-img" />
                                     </div>
                                     <div>
-                                        <h3>Business Tools</h3>
-                                        <p>Dashboard analitiche avanzate e CRM integrato per gli organizzatori.</p>
+                                        <h3>Enterprise Analytics</h3>
+                                        <p>Business Intelligence granulare e strumenti CRM per gli stakeholder del settore.</p>
                                     </div>
                                 </motion.li>
                             </ul>

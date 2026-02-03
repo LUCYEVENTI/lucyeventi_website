@@ -101,10 +101,9 @@ const CoreTech = () => {
         <section className="section-padding bg-surface">
             <div className="container">
                 <div className="text-center mb-16">
-                    <h2 className="section-title">Oltre la Nightlife: <span className="text-gradient-primary">AI & Sviluppo</span></h2>
+                    <h2 className="section-title">Scalable <span className="text-gradient-primary">Intelligence</span></h2>
                     <p className="section-desc max-w-2xl mx-auto">
-                        La tecnologia alla base di Eventi Hub è modulare, proprietaria e pronta per scalare
-                        in diversi settori verticali.
+                        Architettura proprietaria modulare, progettata per l'adattabilità cross-verticale e la massima resilienza.
                     </p>
                 </div>
 
@@ -117,20 +116,20 @@ const CoreTech = () => {
                 >
                     <Card variants={itemVariants} className="tech-card">
                         <ParticleImage src="assets/icon-ai-matching.png" alt="AI Matching" delay={0.2} />
-                        <h3>AI-Powered Matching</h3>
-                        <p>Motore di raccomandazione neurale che analizza pattern comportamentali per suggerimenti iper-personalizzati.</p>
+                        <h3>Behavioral Alignment Engine</h3>
+                        <p>Motore neurale proprietario che trasforma i dati grezzi in intenti utente azionabili.</p>
                     </Card>
 
                     <Card variants={itemVariants} className="tech-card">
                         <ParticleImage src="assets/icon-analytics.png" alt="Analytics" delay={0.4} />
-                        <h3>Predictive Analytics</h3>
-                        <p>Modelli predittivi per gli organizzatori: stima affluenza, ottimizzazione revenue e trend forecasting.</p>
+                        <h3>Predictive Market Intelligence</h3>
+                        <p>Modelli di forecasting avanzati per l'ottimizzazione dinamica delle revenue e l'analisi dei flussi.</p>
                     </Card>
 
                     <Card variants={itemVariants} className="tech-card">
                         <ParticleImage src="assets/icon-cloud.png" alt="Cloud" delay={0.6} />
-                        <h3>Scalable Cloud Arch</h3>
-                        <p>Infrastruttura serverless progettata per gestire picchi di traffico elevati con latenza zero.</p>
+                        <h3>High-Concurrency Cloud</h3>
+                        <p>Infrastruttura serverless geo-distribuita progettata per latenza millisecondi e uptime 99.9%.</p>
                     </Card>
                 </motion.div>
             </div>
@@ -210,23 +209,23 @@ export const Traction = () => {
             <div className="container">
                 <div className="traction-grid">
                     <div className="traction-text">
-                        <h2 className="section-title">Traction & Vision</h2>
+                        <h2 className="section-title">Market Validation</h2>
                         <p className="section-desc">
-                            Dal lancio dell'MVP, i trend confermano un forte bisogno di digitalizzazione nel settore.
+                            Le metriche di adozione confermano la scalabilità del modello e la rapida penetrazione di mercato.
                         </p>
 
                         <div className="roadmap-mini">
                             <div className="roadmap-item active">
                                 <span className="dot"></span>
-                                <span>MVP Lanciato a Roma</span>
+                                <span>MVP Validation Phase</span>
                             </div>
                             <div className="roadmap-item">
                                 <span className="dot"></span>
-                                <span>Espansione Città Metropolitane</span>
+                                <span>City-Level Scale Up</span>
                             </div>
                             <div className="roadmap-item">
                                 <span className="dot"></span>
-                                <span>Scale-up Nazionale & B2B SaaS</span>
+                                <span>National Expansion & SaaS</span>
                             </div>
                         </div>
                     </div>
@@ -243,7 +242,7 @@ export const Traction = () => {
                                 <img src="assets/icon-stats-users.png" alt="Utenti" className="stat-icon-img" />
                             </div>
                             <CountUp end={15} suffix="k+" />
-                            <span className="stat-label">Utenti Attivi</span>
+                            <span className="stat-label">Validated Users</span>
                         </motion.div>
 
                         <motion.div variants={statCardVariants} className="stat-box">
@@ -251,7 +250,7 @@ export const Traction = () => {
                                 <img src="assets/icon-stats-partners.png" alt="Partner" className="stat-icon-img" />
                             </div>
                             <CountUp end={120} suffix="+" />
-                            <span className="stat-label">Locali Partner</span>
+                            <span className="stat-label">B2B Partners</span>
                         </motion.div>
 
                         <motion.div variants={statCardVariants} className="stat-box full">
@@ -259,7 +258,7 @@ export const Traction = () => {
                                 <img src="assets/icon-stats-growth.png" alt="Growth" className="stat-icon-img" />
                             </div>
                             <CountUp end={40} prefix="+" suffix="%" />
-                            <span className="stat-label">Crescita MoM</span>
+                            <span className="stat-label">MoM Growth Rate</span>
                         </motion.div>
                     </motion.div>
                 </div>
