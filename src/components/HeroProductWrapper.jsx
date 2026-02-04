@@ -78,7 +78,7 @@ const HeroProductWrapper = () => {
                                             Esplora la Tecnologia
                                         </Button>
                                         <Button variant="secondary" onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>
-                                            Investor Relations
+                                            Contattaci
                                         </Button>
                                     </div>
                                 </header>
