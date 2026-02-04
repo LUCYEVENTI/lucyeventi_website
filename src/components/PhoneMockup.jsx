@@ -89,9 +89,12 @@ const PhoneMockup = ({ state = 'hero' }) => {
                 >
                     {/* Front Face: Hero State */}
                     <div className="screen-face front" style={{
-                        position: 'absolute', width: '100%', height: '100%', backfaceVisibility: 'hidden',
+                        position: 'absolute', width: '100%', height: '100%',
+                        backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden',
                         display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-                        background: 'var(--bg-dark)'
+                        background: 'var(--bg-dark)',
+                        opacity: state === 'hero' ? 1 : 0,
+                        transition: 'opacity 0.4s'
                     }}>
                         {/* Abstract Hero Visual */}
                         <div style={{ position: 'relative', zIndex: 2 }}>
@@ -100,11 +103,14 @@ const PhoneMockup = ({ state = 'hero' }) => {
                         </div>
                     </div>
 
-                    {/* Back Face: App UI (The content from ProductShowcase) */}
+                    {/* Back Face: App UI */}
                     <div className="screen-face back" style={{
-                        position: 'absolute', width: '100%', height: '100%', backfaceVisibility: 'hidden',
+                        position: 'absolute', width: '100%', height: '100%',
+                        backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden',
                         transform: 'rotateY(180deg)',
-                        background: 'var(--bg-dark)', display: 'flex', flexDirection: 'column'
+                        background: 'var(--bg-dark)', display: 'flex', flexDirection: 'column',
+                        opacity: state === 'app' ? 1 : 0,
+                        transition: 'opacity 0.4s'
                     }}>
                         <div className="mockup-content" style={{ padding: '1rem', paddingTop: '3rem' }}>
                             <div className="ui-header">

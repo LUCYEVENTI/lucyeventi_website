@@ -64,11 +64,9 @@
     mix-blend-mode: screen;
     overflow: hidden;
     line-height: 0.9;
-    padding: 0 0.4em;
-    /* Wider mask to cover side edges */
-    margin-left: -0.2em;
-    /* Compensate for extra padding */
-    margin-right: -0.2em;
+    padding: 0 0.8em;
+    margin-left: -0.4em;
+    margin-right: -0.4em;
 }
 
 .text-video-bg {
