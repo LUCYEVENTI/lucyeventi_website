@@ -34,7 +34,8 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: clip;
+  /* Safer for position:sticky than 'hidden' */
   width: 100%;
 }
 
@@ -44,7 +45,7 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
 }
 

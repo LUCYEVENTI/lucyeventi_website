@@ -83,7 +83,7 @@ const PhoneMockup = ({ state = 'hero' }) => {
                         transformStyle: 'preserve-3d'
                     }}
                     animate={{
-                        rotateX: state === 'app' ? -180 : 0
+                        rotateY: state === 'app' ? 180 : 0
                     }}
                     transition={{ duration: 0.8, ease: "easeInOut" }}
                 >
@@ -103,7 +103,7 @@ const PhoneMockup = ({ state = 'hero' }) => {
                     {/* Back Face: App UI (The content from ProductShowcase) */}
                     <div className="screen-face back" style={{
                         position: 'absolute', width: '100%', height: '100%', backfaceVisibility: 'hidden',
-                        transform: 'rotateX(180deg)',
+                        transform: 'rotateY(180deg)',
                         background: 'var(--bg-dark)', display: 'flex', flexDirection: 'column'
                     }}>
                         <div className="mockup-content" style={{ padding: '1rem', paddingTop: '3rem' }}>
