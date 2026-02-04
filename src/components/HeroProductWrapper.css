@@ -55,24 +55,30 @@
 
 .title-row-bottom {
     display: flex;
-    gap: 0.5rem;
-    align-items: stretch;
+    gap: 0.25rem;
+    /* Reduced gap */
+    align-items: flex-start;
+    /* Changed from stretch to make badge shorter */
 }
 
 .title-col-for {
     writing-mode: vertical-rl;
     text-orientation: mixed;
     transform: rotate(180deg);
-    font-size: clamp(0.875rem, 1.5vw, 1.25rem);
+    font-size: clamp(0.75rem, 1.2vw, 1rem);
+    /* Slighly smaller font */
     background: var(--accent-primary);
     color: white;
-    padding: 0.4rem 0.2rem;
+    padding: 0.3rem 0.15rem;
+    /* Reduced padding */
     border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 900;
     letter-spacing: 0.1em;
+    margin-top: 0.1em;
+    /* Slight offset for better alignment with first line */
 }
 
 .title-col-main {
@@ -118,7 +124,8 @@
     mix-blend-mode: multiply;
     display: flex;
     flex-direction: column;
-    padding: 0.1em 0.5em;
+    padding: 0.1em 0.5em 0.1em 0;
+    /* Removed left padding to shift text left */
     width: 100%;
     font-size: clamp(2.5rem, 7vw, 6.5rem);
     letter-spacing: -0.03em;
