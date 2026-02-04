@@ -69,15 +69,15 @@
     /* Slighly smaller font */
     background: var(--accent-primary);
     color: white;
-    padding: 0.3rem 0.15rem;
-    /* Reduced padding */
+    padding: 0.8rem 0.15rem;
+    /* Increased to hit the requested height (~1.85x) */
     border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 900;
     letter-spacing: 0.1em;
-    margin-top: 0.1em;
+    margin-top: 0.2rem;
     /* Slight offset for better alignment with first line */
 }
 

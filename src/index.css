@@ -34,8 +34,8 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: visible;
-  /* Safer for position:sticky than 'hidden' */
+  overflow-x: clip;
+  /* Fix mobile zoom-out without breaking sticky */
   width: 100%;
 }
 
@@ -45,7 +45,7 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  overflow-x: visible;
+  overflow-x: clip;
   width: 100%;
 }
 
