@@ -2,20 +2,20 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const ParticleImage = ({ src, alt, delay, size = 120 }) => {
-    // Generate static random positions for particles
-    const particleCount = 12;
-    const radius = size / 2 + 20; // Dynamic radius based on size
-
-    const particles = Array.from({ length: particleCount }).map((_, i) => {
-        const angle = (i / particleCount) * 2 * Math.PI;
-        // Randomize radius slightly for organic feel
-        const r = radius + Math.random() * 20;
-        return {
-            x: r * Math.cos(angle),
-            y: r * Math.sin(angle),
-            delay: delay + (Math.random() * 0.2) // Stagger particle arrival
-        };
-    });
+    // Generate static random positions for particles once
+    const particles = React.useMemo(() => {
+        const particleCount = 12;
+        const radius = size / 2 + 20;
+        return Array.from({ length: particleCount }).map((_, i) => {
+            const angle = (i / particleCount) * 2 * Math.PI;
+            const r = radius + Math.random() * 20;
+            return {
+                x: r * Math.cos(angle),
+                y: r * Math.sin(angle),
+                delay: delay + (Math.random() * 0.2)
+            };
+        });
+    }, [size, delay]);
 
     return (
         <div

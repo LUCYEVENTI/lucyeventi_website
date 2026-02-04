@@ -90,38 +90,38 @@ const HeroProductWrapper = () => {
                                 viewport={{ once: true, margin: "-100px" }}
                                 transition={{ duration: 0.6 }}
                             >
-                                <h2 className="section-title text-5xl">L'Interfaccia Utente: <br /><span className="text-gradient">LUCY App.</span></h2>
-                                <p className="section-desc text-xl">
+                                <h2 className="section-title">L'Interfaccia Utente: <br /><span className="text-gradient">LUCY App.</span></h2>
+                                <p className="section-desc">
                                     Il nostro primo touchpoint di mercato. Un ecosistema mobile che dimostra la potenza dei nostri
                                     algoritmi di <strong>matching comportamentale</strong> in tempo reale.
                                 </p>
 
-                                <ul className="feature-list mt-12 space-y-6">
-                                    <motion.li className="feature-item flex items-center gap-6 p-6 rounded-2xl bg-white/5 border border-white/10" whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -20 }} transition={{ delay: 0.1 }}>
-                                        <div className="feature-icon-wrapper w-16 h-16 flex-shrink-0">
-                                            <img src="assets/icon-smart-match.png" alt="Smart Match" className="w-full h-full object-contain" />
+                                <ul className="feature-list">
+                                    <motion.li className="feature-item" whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -20 }} transition={{ delay: 0.1 }}>
+                                        <div className="feature-icon-wrapper">
+                                            <img src="assets/icon-smart-match.png" alt="Smart Match" />
                                         </div>
                                         <div>
-                                            <h3 className="text-xl font-bold text-white">Neural Matching Core</h3>
-                                            <p className="text-white/60">Analisi multi-vettoriale delle preferenze per connessioni ad alta precisione.</p>
+                                            <h3>Neural Matching Core</h3>
+                                            <p>Analisi multi-vettoriale delle preferenze per connessioni ad alta precisione.</p>
                                         </div>
                                     </motion.li>
-                                    <motion.li className="feature-item flex items-center gap-6 p-6 rounded-2xl bg-white/5 border border-white/10" whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -20 }} transition={{ delay: 0.2 }}>
-                                        <div className="feature-icon-wrapper w-16 h-16 flex-shrink-0">
-                                            <img src="assets/icon-security.png" alt="Security" className="w-full h-full object-contain" />
+                                    <motion.li className="feature-item" whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -20 }} transition={{ delay: 0.2 }}>
+                                        <div className="feature-icon-wrapper">
+                                            <img src="assets/icon-security.png" alt="Security" />
                                         </div>
                                         <div>
-                                            <h3 className="text-xl font-bold text-white">Verified Trust Protocol</h3>
-                                            <p className="text-white/60">Sistema di sicurezza decentralizzato basato su feedback verificati e identità reale.</p>
+                                            <h3>Verified Trust Protocol</h3>
+                                            <p>Sistema di sicurezza decentralizzato basato su feedback verificati e identità reale.</p>
                                         </div>
                                     </motion.li>
-                                    <motion.li className="feature-item flex items-center gap-6 p-6 rounded-2xl bg-white/5 border border-white/10" whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -20 }} transition={{ delay: 0.3 }}>
-                                        <div className="feature-icon-wrapper w-16 h-16 flex-shrink-0">
-                                            <img src="assets/icon-business.png" alt="Business" className="w-full h-full object-contain" />
+                                    <motion.li className="feature-item" whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -20 }} transition={{ delay: 0.3 }}>
+                                        <div className="feature-icon-wrapper">
+                                            <img src="assets/icon-business.png" alt="Business" />
                                         </div>
                                         <div>
-                                            <h3 className="text-xl font-bold text-white">Enterprise Analytics</h3>
-                                            <p className="text-white/60">Business Intelligence granulare e strumenti CRM per gli stakeholder del settore.</p>
+                                            <h3>Enterprise Analytics</h3>
+                                            <p>Business Intelligence granulare e strumenti CRM per gli stakeholder del settore.</p>
                                         </div>
                                     </motion.li>
                                 </ul>

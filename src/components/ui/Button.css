@@ -45,3 +45,8 @@
 .btn-outline:hover {
     background: rgba(124, 58, 237, 0.1);
 }
+
+.btn-sm {
+    padding: 0.6rem 1.4rem;
+    font-size: 0.9rem;
+}

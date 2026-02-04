@@ -11,7 +11,7 @@ const Button = ({
 }) => {
     return (
         <motion.button
-            className={`btn btn-${variant} ${className}`}
+            className={`btn btn-${variant} ${size ? `btn-${size}` : ''} ${className}`}
             onClick={onClick}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

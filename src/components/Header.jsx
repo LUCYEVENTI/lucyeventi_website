@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import Button from './ui/Button';
 
+import './Header.css';
+
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -41,27 +43,24 @@ const Header = () => {
     };
 
     return (
-        <header
-            className={`fixed top-0 left-0 w-full z-[100] transition-all duration-300 ${isScrolled ? 'py-4 bg-black/60 backdrop-blur-lg border-b border-white/10' : 'py-6 bg-transparent'
-                }`}
-        >
-            <div className="container mx-auto px-6 flex items-center justify-between">
+        <header className={`main-header ${isScrolled ? 'scrolled' : ''}`}>
+            <div className="container header-container">
                 {/* Logo */}
-                <div className="flex items-center gap-2 cursor-pointer" onClick={(e) => scrollToSection(e, '#hero-start')}>
-                    <div className="w-10 h-10 bg-gradient-to-br from-accent-primary to-accent-secondary rounded-xl flex items-center justify-center shadow-lg shadow-accent-primary/20">
-                        <span className="text-white font-bold text-xl">L</span>
+                <div className="header-logo" onClick={(e) => scrollToSection(e, '#hero-start')}>
+                    <div className="logo-box">
+                        <span>L</span>
                     </div>
-                    <span className="text-white font-bold text-xl tracking-tight">LUCY<span className="text-accent-primary">.</span></span>
+                    <span className="logo-text">LUCY<span>.</span></span>
                 </div>
 
                 {/* Desktop Nav */}
-                <nav className="hidden md:flex items-center gap-8">
+                <nav className="desktop-nav">
                     {navLinks.map((link) => (
                         <a
                             key={link.name}
                             href={link.href}
                             onClick={(e) => scrollToSection(e, link.href)}
-                            className="text-white/70 hover:text-white text-sm font-medium transition-colors"
+                            className="nav-link"
                         >
                             {link.name}
                         </a>
@@ -69,7 +68,7 @@ const Header = () => {
                 </nav>
 
                 {/* Desktop Actions */}
-                <div className="hidden md:flex items-center gap-4">
+                <div className="header-actions">
                     <Button
                         variant="primary"
                         size="sm"
@@ -82,7 +81,7 @@ const Header = () => {
 
                 {/* Mobile Toggle */}
                 <button
-                    className="md:hidden text-white p-2"
+                    className="mobile-toggle"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 >
                     {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -96,20 +95,20 @@ const Header = () => {
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
-                        className="absolute top-full left-0 w-full bg-black/95 backdrop-blur-xl border-b border-white/10 py-8 px-6 md:hidden"
+                        className="mobile-menu"
                     >
-                        <nav className="flex flex-col gap-6">
+                        <nav className="mobile-nav">
                             {navLinks.map((link) => (
                                 <a
                                     key={link.name}
                                     href={link.href}
                                     onClick={(e) => scrollToSection(e, link.href)}
-                                    className="text-white/80 hover:text-white text-lg font-medium"
+                                    className="nav-link"
                                 >
                                     {link.name}
                                 </a>
                             ))}
-                            <div className="pt-4 border-t border-white/10">
+                            <div className="mobile-actions">
                                 <Button
                                     variant="primary"
                                     className="w-full justify-center"
