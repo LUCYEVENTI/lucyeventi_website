@@ -33,8 +33,8 @@ const HeroProductWrapper = () => {
                 <div className="gradient-sphere sphere-2"></div>
             </div>
 
-            <div className="container min-h-[180vh]"> {/* Tall container to allow for scrolling while sticky */}
-                <div className="unified-grid h-full">
+            <div className="container">
+                <div className="unified-grid">
                     {/* Left Column: Scrollable Content */}
                     <div className="content-column">
 
