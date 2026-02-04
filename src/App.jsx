@@ -34,7 +34,7 @@ function App() {
           <CoreTech />
         </div>
 
-        <div id="vision">
+        <div id="traction">
           <Traction />
         </div>
 
