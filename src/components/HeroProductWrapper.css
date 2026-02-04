@@ -3,7 +3,8 @@
     display: grid;
     grid-template-columns: 1.2fr 1fr;
     gap: clamp(2rem, 5vw, 4rem);
-    align-items: start;
+    align-items: stretch;
+    /* Critical: Allows columns to match height */
     max-width: 1400px;
     margin: 0 auto;
     position: relative;
