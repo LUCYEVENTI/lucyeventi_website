@@ -20,8 +20,7 @@ const Header = () => {
     const navLinks = [
         { name: 'Tecnologia', href: '#tech' },
         { name: 'App', href: '#product-start' },
-        { name: 'Vision', href: '#traction' },
-        { name: 'Company', href: '#company' },
+        { name: 'Visione', href: '#traction' },
     ];
 
     const scrollToSection = (e, href) => {
@@ -48,9 +47,9 @@ const Header = () => {
                 {/* Logo */}
                 <div className="header-logo" onClick={(e) => scrollToSection(e, '#hero-start')}>
                     <div className="logo-box">
-                        <span>L</span>
+                        <img src="assets/favicon.png" alt="LUCY Logo" style={{ width: '24px', height: '24px' }} />
                     </div>
-                    <span className="logo-text">LUCY<span>.</span></span>
+                    <span className="logo-text">lucyeventi<span>.</span></span>
                 </div>
 
                 {/* Desktop Nav */}
@@ -72,10 +71,10 @@ const Header = () => {
                     <Button
                         variant="primary"
                         size="sm"
+                        disabled={true}
                         icon={ArrowRight}
-                        onClick={(e) => scrollToSection(e, '#contact')}
                     >
-                        Investitori
+                        Download App
                     </Button>
                 </div>
 
@@ -112,10 +111,10 @@ const Header = () => {
                                 <Button
                                     variant="primary"
                                     className="w-full justify-center"
+                                    disabled={true}
                                     icon={ArrowRight}
-                                    onClick={(e) => scrollToSection(e, '#contact')}
                                 >
-                                    Investor Relations
+                                    Download App
                                 </Button>
                             </div>
                         </nav>

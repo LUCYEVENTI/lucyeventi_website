@@ -8,14 +8,17 @@ const Button = ({
     size,
     onClick,
     className = '',
-    icon: Icon
+    icon: Icon,
+    disabled = false
 }) => {
     return (
         <motion.button
             className={`btn btn-${variant} ${size ? `btn-${size}` : ''} ${className}`}
-            onClick={onClick}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            onClick={disabled ? undefined : onClick}
+            disabled={disabled}
+            whileHover={disabled ? {} : { scale: 1.05 }}
+            whileTap={disabled ? {} : { scale: 0.95 }}
+            style={{ opacity: disabled ? 0.5 : 1, cursor: disabled ? 'not-allowed' : 'pointer' }}
         >
             {children}
             {Icon && <Icon size={20} className="btn-icon" />}
