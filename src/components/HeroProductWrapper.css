@@ -165,8 +165,8 @@
 
 
 .feature-icon-wrapper {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     flex-shrink: 0;
     display: flex;
     align-items: center;
@@ -176,9 +176,9 @@
 }
 
 .feature-icon-wrapper img {
-    width: 65px;
-    /* Further 30% increase */
-    height: 65px;
+    width: 80px;
+    /* Increased by ~23% from 65px */
+    height: 80px;
     object-fit: contain;
     transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
