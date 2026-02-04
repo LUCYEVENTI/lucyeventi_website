@@ -20,6 +20,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+}
+
+.main-header .container {
+    padding: 0 2rem;
+    /* Reduced padding to push items to edges */
+    max-width: 100%;
+    /* Allow full width for push-to-edge feel */
 }
 
 .header-logo {
@@ -30,14 +38,11 @@
 }
 
 .logo-box {
-    width: 40px;
-    height: 40px;
-    background: linear-gradient(135deg, var(--accent-primary), #A78BFA);
-    border-radius: 12px;
+    width: 32px;
+    height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
 }
 
 .logo-box span {

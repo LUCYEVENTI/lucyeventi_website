@@ -20,7 +20,7 @@ const Header = () => {
     const navLinks = [
         { name: 'Tecnologia', href: '#tech' },
         { name: 'App', href: '#product-start' },
-        { name: 'Visione', href: '#traction' },
+        { name: 'Visione', href: '#vision' },
     ];
 
     const scrollToSection = (e, href) => {
