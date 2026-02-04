@@ -150,21 +150,22 @@
     color: rgba(255, 255, 255, 0.6);
 }
 
-/* STICKY COLUMN */
+/* STICKY COLUMN TRACK */
 .sticky-column {
     height: 100%;
 }
 
 .sticky-wrapper {
-    position: sticky !important;
-    top: 80px;
-    /* Offset for fixed header */
-    height: calc(100vh - 80px);
-    /* Fill remaining viewport */
+    position: -webkit-sticky;
+    position: sticky;
+    top: 100px;
+    /* Consistent gap from header */
+    align-self: start;
+    /* Don't stretch the wrapper itself */
     display: flex;
-    align-items: center;
     justify-content: center;
     z-index: 50;
+    width: 100%;
 }
 
 /* MOBILE PHONE FALLBACK */

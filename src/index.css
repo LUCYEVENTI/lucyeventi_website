@@ -32,37 +32,24 @@
   padding: 0;
 }
 
-html,
-body {
-  overflow-x: hidden;
-  width: 100%;
-  position: relative;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   background-color: var(--bg-dark);
   color: var(--text-primary);
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-  /* "Calibrated" / Snapping scrolling */
-  overflow-y: scroll;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  width: 100%;
 }
 
-/* Ensure sections snap */
-section,
-main>div {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  /* Forces stopping at snap points */
-}
-
-/* Exception for very tall sections to avoid getting stuck if needed,
-   but for now enforcing the "pro" feel */
-.unified-wrapper {
-  scroll-snap-align: start;
+/* Base section spacing and layout */
+section {
+  position: relative;
+  width: 100%;
 }
 
 h1,
@@ -119,12 +106,14 @@ a {
 .text-gradient {
   background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-primary {
   background: linear-gradient(135deg, var(--accent-primary) 0%, #A78BFA 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
