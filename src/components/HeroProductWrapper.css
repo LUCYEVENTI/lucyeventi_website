@@ -155,10 +155,14 @@
 }
 
 .feature-item:hover {
-    background: rgba(255, 255, 255, 0.04);
-    border-color: var(--accent-primary);
-    transform: translateX(5px);
+    transform: translateX(10px);
 }
+
+.feature-item:hover .feature-icon-wrapper img {
+    filter: drop-shadow(0 0 15px rgba(139, 92, 246, 0.4));
+    transform: scale(1.1);
+}
+
 
 .feature-icon-wrapper {
     width: 100px;
@@ -176,6 +180,7 @@
     /* Further 30% increase */
     height: 65px;
     object-fit: contain;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .feature-item h3 {
