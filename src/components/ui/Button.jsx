@@ -5,6 +5,7 @@ import './Button.css';
 const Button = ({
     children,
     variant = 'primary',
+    size,
     onClick,
     className = '',
     icon: Icon
