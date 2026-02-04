@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Header from './components/Header';
 import HeroProductWrapper from './components/HeroProductWrapper';
 
 import CoreTech, { Traction } from './components/CoreTech';
@@ -17,6 +18,7 @@ function App() {
 
   return (
     <>
+      <Header />
       <ScrollProgress /> {/* Add Navigation Dots */}
 
       <motion.div
