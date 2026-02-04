@@ -47,17 +47,25 @@ const HeroProductWrapper = () => {
                                 viewport={{ once: true }}
                             >
                                 <header className="hero-header">
-                                    <h1 className="hero-title">
-                                        <span className="hero-title-line">Artificial Intelligence for</span>
-                                        <span className="hero-title-line">
-                                            <span className="video-text-mask-container">
-                                                <video autoPlay loop muted playsInline className="text-video-bg" aria-hidden="true">
-                                                    <source src="assets/club-video3.mp4" type="video/mp4" />
-                                                </video>
-                                                <span className="video-purple-overlay" aria-hidden="true"></span>
-                                                <span className="video-text-layer">Human Connection.</span>
-                                            </span>
-                                        </span>
+                                    <h1 className="hero-title-modular">
+                                        <div className="title-row-top">
+                                            Artificial Intelligence
+                                        </div>
+                                        <div className="title-row-bottom">
+                                            <div className="title-col-for">for</div>
+                                            <div className="title-col-main">
+                                                <div className="video-text-mask-container">
+                                                    <video autoPlay loop muted playsInline className="text-video-bg" aria-hidden="true">
+                                                        <source src="assets/club-video3.mp4" type="video/mp4" />
+                                                    </video>
+                                                    <span className="video-purple-overlay" aria-hidden="true"></span>
+                                                    <div className="video-text-layer">
+                                                        <span>Human</span>
+                                                        <span>Connection.</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </h1>
 
                                     <p className="hero-subtitle">
