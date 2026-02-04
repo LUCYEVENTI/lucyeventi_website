@@ -57,8 +57,8 @@
     display: flex;
     gap: 0.25rem;
     /* Reduced gap */
-    align-items: flex-start;
-    /* Changed from stretch to make badge shorter */
+    align-items: stretch;
+    /* Stretch to cover full height of stacked lines */
 }
 
 .title-col-for {
@@ -66,19 +66,18 @@
     text-orientation: mixed;
     transform: rotate(180deg);
     font-size: clamp(0.75rem, 1.2vw, 1rem);
-    /* Slighly smaller font */
     background: var(--accent-primary);
     color: white;
-    padding: 0.8rem 0.15rem;
-    /* Increased to hit the requested height (~1.85x) */
+    padding: 0 0.2rem;
+    /* Remove vertical padding to let it stretch */
     border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 900;
     letter-spacing: 0.1em;
-    margin-top: 0.2rem;
-    /* Slight offset for better alignment with first line */
+    margin: 0;
+    /* Reset margin */
 }
 
 .title-col-main {
