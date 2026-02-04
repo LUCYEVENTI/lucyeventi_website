@@ -83,7 +83,7 @@ const PhoneMockup = ({ state = 'hero' }) => {
                         transformStyle: 'preserve-3d'
                     }}
                     animate={{
-                        rotateX: isMobile ? 0 : (state === 'app' ? -180 : 0)
+                        rotateX: state === 'app' ? -180 : 0
                     }}
                     transition={{ duration: 0.8, ease: "easeInOut" }}
                 >
@@ -91,9 +91,7 @@ const PhoneMockup = ({ state = 'hero' }) => {
                     <div className="screen-face front" style={{
                         position: 'absolute', width: '100%', height: '100%', backfaceVisibility: 'hidden',
                         display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-                        background: 'var(--bg-dark)',
-                        opacity: (isMobile && state === 'app') ? 0 : 1, // Crossfade on mobile
-                        transition: 'opacity 0.5s'
+                        background: 'var(--bg-dark)'
                     }}>
                         {/* Abstract Hero Visual */}
                         <div style={{ position: 'relative', zIndex: 2 }}>
@@ -105,10 +103,8 @@ const PhoneMockup = ({ state = 'hero' }) => {
                     {/* Back Face: App UI (The content from ProductShowcase) */}
                     <div className="screen-face back" style={{
                         position: 'absolute', width: '100%', height: '100%', backfaceVisibility: 'hidden',
-                        transform: isMobile ? 'none' : 'rotateX(180deg)', // No rotation needed on mobile if we don't flip
-                        background: 'var(--bg-dark)', display: 'flex', flexDirection: 'column',
-                        opacity: (isMobile && state !== 'app') ? 0 : 1,
-                        zIndex: (isMobile && state === 'app') ? 10 : 0
+                        transform: 'rotateX(180deg)',
+                        background: 'var(--bg-dark)', display: 'flex', flexDirection: 'column'
                     }}>
                         <div className="mockup-content" style={{ padding: '1rem', paddingTop: '3rem' }}>
                             <div className="ui-header">
